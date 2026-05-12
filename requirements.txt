@@ -1,0 +1,40 @@
+# Core Framework
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Database
+sqlalchemy
+supabase
+alembic
+chromadb
+
+# Vector Database
+sentence-transformers
+
+# AI Services
+huggingface-hub
+transformers
+torch
+google-genai
+
+# Web Scraping
+apify-client
+urllib3<2.0
+
+# Caching
+redis
+
+# Utilities
+python-dotenv
+httpx
+tenacity
+nltk
+
+# Testing
+pytest
+pytest-asyncio
+
+# MCP (Model Context Protocol)
+mcp
