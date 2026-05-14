@@ -16,7 +16,6 @@ Callable from other scripts:
     run_pipeline("Groww", provider="gemini", start_from="agent2")
 """
 
-import os
 import sys
 import json
 import asyncio
@@ -24,33 +23,49 @@ import argparse
 import logging
 from typing import Optional
 
+try:
+    from agents.paths import project_db_path
+except ModuleNotFoundError:
+    from paths import project_db_path
+
 log = logging.getLogger("pipeline")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
-DB_FOLDER = "database_mock"
 ORDER = ["agent1", "agent2", "agent3", "agent4"]
 
 
 def _run_agent1(payload: dict) -> str:
-    from agent1_orchestrator import orchestrate_agent_1
+    try:
+        from agents.agent1_orchestrator import orchestrate_agent_1
+    except ModuleNotFoundError:
+        from agent1_orchestrator import orchestrate_agent_1
     return asyncio.run(orchestrate_agent_1(payload))
 
 
 def _run_agent2(project_name: str, provider: str) -> dict:
-    from agent2_insight import run_agent2
+    try:
+        from agents.agent2_insight import run_agent2
+    except ModuleNotFoundError:
+        from agent2_insight import run_agent2
     return run_agent2(project_name, provider=provider)
 
 
 def _run_agent3(project_name: str, provider: str) -> dict:
-    from agent3_synthesis import run_agent3
+    try:
+        from agents.agent3_synthesis import run_agent3
+    except ModuleNotFoundError:
+        from agent3_synthesis import run_agent3
     return run_agent3(project_name, provider=provider)
 
 
 def _run_agent4(project_name: str, provider: str) -> dict:
-    from agent4_brief import run_agent4
+    try:
+        from agents.agent4_brief import run_agent4
+    except ModuleNotFoundError:
+        from agent4_brief import run_agent4
     return run_agent4(project_name, provider=provider)
 
 
@@ -100,9 +115,9 @@ def run_pipeline(
             log.error(f"Pipeline stopped at {agent_name}: {e}")
             raise
 
-    doc_path = os.path.join(DB_FOLDER, project_name, "db_document.json")
-    if os.path.exists(doc_path):
-        with open(doc_path, "r", encoding="utf-8") as f:
+    doc_path = project_db_path(project_name)
+    if doc_path.exists():
+        with doc_path.open("r", encoding="utf-8") as f:
             final_doc = json.load(f)
         status = final_doc.get("processing_status", {})
         log.info("\n" + "=" * 55)

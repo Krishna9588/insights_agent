@@ -794,24 +794,19 @@ def _cli():
         _print_result(result)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# DEMO — PyCharm Run button
-# ─────────────────────────────────────────────────────────────────────────────
-
-DEMO_INPUT      = input("Enter file path: ").strip()
-DEMO_OUTPUT_DIR = "output"
-DEMO_HF_TOKEN   = HF_TOKEN   # set HF_TOKEN env var, or paste here
-
-
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         _cli()
     else:
+        demo_input = input("Enter file path: ").strip()
+        demo_output_dir = "output"
+        demo_hf_token = HF_TOKEN
+
         print(f"\n{'='*60}")
         print("  Agent 1 Internal — Cloud")
         print(f"{'='*60}\n")
 
-        result  = agent1_internal(DEMO_INPUT, DEMO_OUTPUT_DIR, DEMO_HF_TOKEN)
+        result  = agent1_internal(demo_input, demo_output_dir, demo_hf_token)
         results = result if isinstance(result, list) else [result]
 
         print(f"\n{'='*60}")

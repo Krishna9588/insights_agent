@@ -11,11 +11,15 @@ Callable from other scripts:
     result = run_agent4("Groww", provider="gemini")
 """
 
-import os
 import json
 import logging
 
-from model_connect import call_llm
+try:
+    from agents.model_connect import call_llm
+    from agents.paths import project_db_path
+except ModuleNotFoundError:
+    from model_connect import call_llm
+    from paths import project_db_path
 
 log = logging.getLogger("agent4")
 logging.basicConfig(
@@ -23,15 +27,13 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
-DB_FOLDER = "database_mock"
-
 # ─────────────────────────────────────────────────────────────────────────────
 # DB HELPERS
 # ─────────────────────────────────────────────────────────────────────────────
 
 def load_db_document(project_name: str) -> dict:
-    path = os.path.join(DB_FOLDER, project_name, "db_document.json")
-    if not os.path.exists(path):
+    path = project_db_path(project_name)
+    if not path.exists():
         raise FileNotFoundError(
             f"No db_document found for '{project_name}'. Run Agent 1 first."
         )
@@ -40,10 +42,10 @@ def load_db_document(project_name: str) -> dict:
 
 
 def save_db_document(project_name: str, doc: dict) -> str:
-    path = os.path.join(DB_FOLDER, project_name, "db_document.json")
+    path = project_db_path(project_name)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(doc, f, indent=4, ensure_ascii=False)
-    return path
+    return str(path)
 
 
 # ─────────────────────────────────────────────────────────────────────────────

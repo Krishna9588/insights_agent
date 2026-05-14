@@ -3,6 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/agents/database_mock" />
+      <excludeFolder url="file://$MODULE_DIR$/new_testing" />
+      <excludeFolder url="file://$MODULE_DIR$/scrapers/data" />
+      <excludeFolder url="file://$MODULE_DIR$/transcript_input" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.14 (insights)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

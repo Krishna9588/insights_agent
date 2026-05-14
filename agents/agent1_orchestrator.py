@@ -54,13 +54,18 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 
+try:
+    from agents.paths import DB_ROOT
+except ModuleNotFoundError:
+    from paths import DB_ROOT
+
 log = logging.getLogger("agent1_orchestrator")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
-DB_FOLDER = "database_mock"
+DB_FOLDER = str(DB_ROOT)
 
 # Folders that scrapers write to by default (we consolidate them into raw/)
 HARDCODED_SCRAPER_FOLDERS = ["reddit_data", "youtube_data", "signals"]
@@ -243,6 +248,69 @@ def _build_youtube_tasks(youtube_configs: List[Dict]) -> Dict[str, Any]:
     return tasks
 
 
+def _flatten_internal_results(result: Any) -> List[Dict[str, Any]]:
+    """Normalize single/batch transcript processor results into one signal list."""
+    if result is None:
+        return []
+    items = result if isinstance(result, list) else [result]
+    flattened = []
+    for item in items:
+        if dataclasses.is_dataclass(item):
+            item = dataclasses.asdict(item)
+        if not isinstance(item, dict) or item.get("error"):
+            continue
+        for signal in item.get("signals", []) or []:
+            if dataclasses.is_dataclass(signal):
+                signal = dataclasses.asdict(signal)
+            if isinstance(signal, dict):
+                enriched = dict(signal)
+                enriched.setdefault("source_file", item.get("source_file"))
+                enriched.setdefault("meeting_type", item.get("metadata", {}).get("meeting_type"))
+                flattened.append(enriched)
+    return flattened
+
+
+def _run_google_drive_transcript_sync(
+    project_name: str,
+    raw_dir: str,
+    drive_config: Dict[str, Any],
+) -> Dict[str, Any]:
+    """
+    Sync new Google Drive transcript files, process them as internal signals,
+    and return both sync metadata and normalized signals for downstream agents.
+    """
+    from scrapers.google_drive import sync_google_drive_transcripts
+    from scrapers.agent1_internal_cloud import agent1_internal
+
+    sync_result = sync_google_drive_transcripts(
+        project_name=project_name,
+        folder_id=drive_config.get("folder_id"),
+        credentials_path=drive_config.get("credentials_path"),
+        token_path=drive_config.get("token_path"),
+        local_dir=drive_config.get("local_dir"),
+        state_path=drive_config.get("state_path"),
+        include_existing=drive_config.get("include_existing", False),
+        max_files=drive_config.get("max_files"),
+    )
+
+    downloaded_paths = [
+        f.get("local_path")
+        for f in sync_result.get("downloaded_files", [])
+        if f.get("local_path")
+    ]
+    processor_results = []
+    if downloaded_paths:
+        processor_results = agent1_internal(downloaded_paths, output_dir=raw_dir)
+
+    return {
+        "status": "success",
+        "sync": sync_result,
+        "processed_files": len(downloaded_paths),
+        "processor_results": make_json_serializable(processor_results),
+        "signals": _flatten_internal_results(processor_results),
+    }
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # MAIN ORCHESTRATOR
 # ─────────────────────────────────────────────────────────────────────────────
@@ -274,18 +342,19 @@ async def orchestrate_agent_1(payload: Dict[str, Any]) -> str:
     domain     = (payload.get("domain") or "").strip() or None
     task_map   = {}
 
-    # ── Company Profile (always runs) ────────────────────────────
-    try:
-        from scrapers.company_profile import run_research_task
-        log.info("Task: company_profile")
-        task_map["company_profile"] = run_scraper_safe(
-            run_research_task,
-            company_input  = project_name,
-            company_domain = domain,
-            storage_folder = raw_dir,
-        )
-    except ImportError:
-        log.warning("company_profile_best.py not found — skipping company profile")
+    # ── Company Profile ──────────────────────────────────────────
+    if not payload.get("skip_company_profile"):
+        try:
+            from scrapers.company_profile import run_research_task
+            log.info("Task: company_profile")
+            task_map["company_profile"] = run_scraper_safe(
+                run_research_task,
+                company_input  = project_name,
+                company_domain = domain,
+                storage_folder = raw_dir,
+            )
+        except ImportError:
+            log.warning("company_profile_best.py not found — skipping company profile")
 
     # ── Play Store ───────────────────────────────────────────────
     if "play_store" in payload:
@@ -342,6 +411,17 @@ async def orchestrate_agent_1(payload: Dict[str, Any]) -> str:
 
         youtube_tasks = _build_youtube_tasks(youtube_cfg)
         task_map.update(youtube_tasks)
+
+    # ── Google Drive Transcripts ─────────────────────────────────
+    if "google_drive" in payload:
+        gd_cfg = payload["google_drive"] or {}
+        log.info(f"Task: google_drive_transcripts folder={gd_cfg.get('folder_id')}")
+        task_map["google_drive_transcripts"] = run_scraper_safe(
+            _run_google_drive_transcript_sync,
+            project_name,
+            raw_dir,
+            gd_cfg,
+        )
 
     # ── Internal Transcripts ─────────────────────────────────────
     if "transcripts" in payload:
@@ -403,11 +483,23 @@ async def orchestrate_agent_1(payload: Dict[str, Any]) -> str:
     if merged_youtube:
         clean_data["youtube"] = merged_youtube
 
+    db_filepath = os.path.join(project_dir, "db_document.json")
+    existing_document: Dict[str, Any] = {}
+    if os.path.exists(db_filepath):
+        try:
+            with open(db_filepath, "r", encoding="utf-8") as f:
+                existing_document = json.load(f)
+        except Exception as e:
+            log.warning(f"Could not read existing db_document for merge: {e}")
+
+    merged_sources = existing_document.get("data_sources", {})
+    merged_sources.update(clean_data)
+
     final_document = {
         "project_name"     : project_name,
-        "domain"           : domain,
+        "domain"           : domain or existing_document.get("domain"),
         "ingestion_date"   : datetime.now().isoformat(),
-        "data_sources"     : clean_data,
+        "data_sources"     : merged_sources,
         "processing_status": {
             "agent2_insights_extracted" : False,
             "agent3_synthesis_done"     : False,
@@ -418,7 +510,6 @@ async def orchestrate_agent_1(payload: Dict[str, Any]) -> str:
         "agent4_output": {},
     }
 
-    db_filepath = os.path.join(project_dir, "db_document.json")
     with open(db_filepath, "w", encoding="utf-8") as f:
         json.dump(final_document, f, indent=4, ensure_ascii=False)
 

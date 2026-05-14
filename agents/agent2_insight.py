@@ -11,12 +11,16 @@ Callable from other scripts:
     result = run_agent2("Groww", provider="gemini")
 """
 
-import os
 import json
 import logging
 from typing import Optional
 
-from model_connect import call_llm
+try:
+    from agents.model_connect import call_llm
+    from agents.paths import project_db_path
+except ModuleNotFoundError:
+    from model_connect import call_llm
+    from paths import project_db_path
 
 log = logging.getLogger("agent2")
 logging.basicConfig(
@@ -24,16 +28,13 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
-DB_FOLDER = "database_mock"
-
-
 # ─────────────────────────────────────────────────────────────────────────────
 # DB HELPERS
 # ─────────────────────────────────────────────────────────────────────────────
 
 def load_db_document(project_name: str) -> dict:
-    path = os.path.join(DB_FOLDER, project_name, "db_document.json")
-    if not os.path.exists(path):
+    path = project_db_path(project_name)
+    if not path.exists():
         raise FileNotFoundError(
             f"No db_document found for '{project_name}'. "
             f"Run Agent 1 first. Expected path: {path}"
@@ -43,10 +44,10 @@ def load_db_document(project_name: str) -> dict:
 
 
 def save_db_document(project_name: str, doc: dict) -> str:
-    path = os.path.join(DB_FOLDER, project_name, "db_document.json")
+    path = project_db_path(project_name)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(doc, f, indent=4, ensure_ascii=False)
-    return path
+    return str(path)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -98,6 +99,48 @@ def _get_reviews(store_data: dict, star_threshold: int = 3, limit: int = 50) -> 
     # Sort by rating ascending (worst first) then trim
     filtered.sort(key=lambda x: x["rating"])
     return filtered[:limit]
+
+
+def _extract_internal_signal_items(source: object, limit: int = 60) -> list:
+    """Handle single, batch, and Google Drive transcript result shapes."""
+    items = []
+
+    def add_signal(signal: dict, source_file: str = "", meeting_type: str = "") -> None:
+        if not isinstance(signal, dict):
+            return
+        content = signal.get("content", "")
+        if not content:
+            return
+        items.append({
+            "type": signal.get("signal_type", signal.get("type", "")),
+            "content": content,
+            "conf": signal.get("confidence", signal.get("conf", 0)),
+            "source_file": signal.get("source_file", source_file),
+            "meeting_type": signal.get("meeting_type", meeting_type),
+        })
+
+    def visit(node: object) -> None:
+        if not node:
+            return
+        if isinstance(node, list):
+            for child in node:
+                visit(child)
+            return
+        if not isinstance(node, dict) or node.get("status") == "error":
+            return
+
+        source_file = node.get("source_file", "")
+        meeting_type = node.get("metadata", {}).get("meeting_type", "")
+
+        for signal in node.get("signals", []) or []:
+            add_signal(signal, source_file, meeting_type)
+
+        # Agent 1 Google Drive wrapper keeps original processor output here.
+        for child in node.get("processor_results", []) or []:
+            visit(child)
+
+    visit(source)
+    return items[:limit]
 
 
 def _extract_signals(data_sources: dict) -> dict:
@@ -168,8 +211,10 @@ def _extract_signals(data_sources: dict) -> dict:
             app_info["play_store_rating"] = ps_meta["score"]
             app_info["play_store_total_ratings"] = ps_meta.get("ratings")
             app_info["play_store_installs"]       = ps_meta.get("installs")
+            app_info["play_store_description"]    = (ps_meta.get("description") or ps_meta.get("summary") or "")[:1000]
         if as_meta.get("score"):
             app_info["app_store_rating"] = as_meta["score"]
+            app_info["app_store_description"]    = (as_meta.get("description") or as_meta.get("summary") or "")[:1000]
         if app_info:
             signals["app_store_metadata"] = app_info
 
@@ -235,20 +280,16 @@ def _extract_signals(data_sources: dict) -> dict:
             ]
             log.info(f"  YouTube: {len(signals['youtube_comments'])} comments extracted")
 
-    # ── Internal Transcripts ──────────────────────────────────────────────────
-    it = data_sources.get("internal_transcripts", {})
-    if isinstance(it, dict) and it.get("status") != "error":
-        signal_items = it.get("signals", [])
+    # ── Internal / Google Drive Transcripts ───────────────────────────────────
+    transcript_sources = []
+    for key in ("internal_transcripts", "google_drive_transcripts"):
+        signal_items = _extract_internal_signal_items(data_sources.get(key, {}))
         if signal_items:
-            signals["internal_signals"] = [
-                {
-                    "type"   : s.get("signal_type", ""),
-                    "content": s.get("content", ""),
-                    "conf"   : s.get("confidence", 0),
-                }
-                for s in signal_items[:30]
-            ]
-            log.info(f"  Internal transcripts: {len(signals['internal_signals'])} signals")
+            transcript_sources.extend(signal_items)
+            log.info(f"  {key}: {len(signal_items)} signals")
+
+    if transcript_sources:
+        signals["internal_signals"] = transcript_sources[:80]
 
     return signals
 

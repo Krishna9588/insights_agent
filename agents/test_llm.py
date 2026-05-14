@@ -1,4 +1,7 @@
-from model_connect import call_llm
+try:
+    from agents.model_connect import call_llm
+except ModuleNotFoundError:
+    from model_connect import call_llm
 
 def check():
     print("Starting LLM Connection Tests...\n")

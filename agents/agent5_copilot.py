@@ -25,12 +25,16 @@ The Copilot does NOT answer from general knowledge — every answer
 must be grounded in the actual db_document data for this project.
 """
 
-import os
 import json
 import logging
 from typing import Optional
 
-from model_connect import call_llm
+try:
+    from agents.model_connect import call_llm
+    from agents.paths import project_db_path
+except ModuleNotFoundError:
+    from model_connect import call_llm
+    from paths import project_db_path
 
 log = logging.getLogger("agent5")
 logging.basicConfig(
@@ -38,16 +42,13 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
-DB_FOLDER = "database_mock"
-
-
 # ─────────────────────────────────────────────────────────────────────────────
 # DB HELPERS
 # ─────────────────────────────────────────────────────────────────────────────
 
 def load_db_document(project_name: str) -> dict:
-    path = os.path.join(DB_FOLDER, project_name, "db_document.json")
-    if not os.path.exists(path):
+    path = project_db_path(project_name)
+    if not path.exists():
         raise FileNotFoundError(
             f"No db_document found for '{project_name}'. "
             f"Run Agent 1 (and ideally Agents 2-4) first."
