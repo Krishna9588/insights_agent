@@ -42,6 +42,24 @@ class GoogleDriveScraper:
 
         return response.json().get('files', [])
 
+    def get_all_files_recursive(self, folder_id, path_prefix=""):
+        """
+        Recursively fetches all files inside a folder (and its subfolders).
+        """
+        all_files = []
+        try:
+            files = self.list_files(folder_id)
+            for item in files:
+                current_path = f"{path_prefix}{item['name']}"
+                if item['mimeType'] == 'application/vnd.google-apps.folder':
+                    all_files.extend(self.get_all_files_recursive(item['id'], path_prefix=f"{current_path}/"))
+                else:
+                    item['display_name'] = current_path
+                    all_files.append(item)
+        except Exception as e:
+            print(f"Error fetching contents for folder ID {folder_id}: {e}")
+        return all_files
+
     def download_file(self, file_id, file_name, mime_type, save_directory="google_download"):
         """
         Downloads a file. Automatically converts Google Docs to plain text.
@@ -87,8 +105,7 @@ def get_file_type(mime_type):
 
 def google_drive():
     """
-    Interactively prompts the user for Google Drive URLs, lets them select files,
-    and returns the selected file details for further processing.
+    Interactively prompts the user for Google Drive URLs, lets them select and download files.
     """
     scraper = GoogleDriveScraper()
 
@@ -102,13 +119,15 @@ def google_drive():
 
     if not urls:
         print("No URLs provided.")
-        return []
+        return
 
     all_files = []
     for url in urls:
         try:
             folder_id = scraper.extract_id(url)
             files = scraper.list_files(folder_id)
+            for f in files:
+                f['display_name'] = f['name']
             all_files.extend(files)
         except ValueError as e:
             print(f"Skipping invalid URL '{url}': {e}")
@@ -117,17 +136,18 @@ def google_drive():
 
     if not all_files:
         print("No files found in the provided locations.")
-        return []
+        return
 
-    print("\n--- Available Files ---")
+    print("\n--- Available Files & Folders ---")
     for i, item in enumerate(all_files):
         file_type = get_file_type(item['mimeType'])
-        print(f"{i + 1}: {item['name']} ({file_type})")
-    print("-------------------------\n")
+        icon = "📁" if file_type == 'Folder' else "📄"
+        print(f"{i + 1}: {icon} {item.get('display_name', item['name'])} ({file_type})")
+    print("---------------------------------\n")
 
-    selected_files = []
+    selected_indices = []
     while True:
-        choice_str = input("Enter the numbers of the files to process (e.g., 1, 3, 5), or 'a' for all: ")
+        choice_str = input("Enter the numbers of the items to process (e.g., 1 3 5), or 'a' for all: ")
         if choice_str.lower() == 'a':
             selected_indices = range(len(all_files))
             break
@@ -139,16 +159,100 @@ def google_drive():
             else:
                 print("Invalid number. Please select valid items from the list.")
         except ValueError:
-            print("Invalid input. Please enter numbers separated by spaces or commas.")
+            print("Invalid input. Please enter numbers separated by spaces.")
 
+    expanded_files = []
+    needs_refinement = False
     for i in selected_indices:
-        if 'folder' not in get_file_type(all_files[i]['mimeType']).lower():
-            selected_files.append(all_files[i])
+        item = all_files[i]
+        if get_file_type(item['mimeType']) == 'Folder':
+            needs_refinement = True
+            sub_files = scraper.get_all_files_recursive(item['id'], path_prefix=f"{item['name']}/")
+            expanded_files.extend(sub_files)
         else:
-            print(f"Skipping folder: {all_files[i]['name']}")
+            expanded_files.append(item)
 
-    print(f"\nSelected {len(selected_files)} file(s) for processing.")
-    return selected_files
+    if not expanded_files:
+        print("No files found in the selection.")
+        return
+
+    final_list_for_selection = expanded_files
+    if needs_refinement:
+        print("\n--- Final File Selection ---")
+        tree = {}
+        for item in expanded_files:
+            parts = item.get('display_name', item['name']).split('/')
+            current_level = tree
+            for part in parts[:-1]:
+                if part not in current_level:
+                    current_level[part] = {}
+                current_level = current_level[part]
+            file_name = parts[-1]
+            if file_name not in current_level or 'id' not in current_level[file_name]:
+                current_level[file_name] = item
+            else:
+                current_level[f"{file_name}_{item['id']}"] = item
+
+        ordered_files = []
+        def print_tree(node, prefix=""):
+            keys = list(node.keys())
+            def sort_key(k):
+                child = node[k]
+                is_folder = isinstance(child, dict) and 'id' not in child
+                return (not is_folder, k.lower())
+            keys.sort(key=sort_key)
+            for i, key in enumerate(keys):
+                is_last = (i == len(keys) - 1)
+                connector = "└── " if is_last else "├── "
+                child = node[key]
+                if isinstance(child, dict) and 'id' not in child:
+                    print(f"{prefix}{connector}📁 {key}")
+                    extension_prefix = "    " if is_last else "│   "
+                    print_tree(child, prefix + extension_prefix)
+                else:
+                    ordered_files.append(child)
+                    idx = len(ordered_files)
+                    file_type = get_file_type(child['mimeType'])
+                    print(f"{prefix}{connector}{idx}: 📄 {key} ({file_type})")
+        print_tree(tree)
+        print("----------------------------\n")
+        final_list_for_selection = ordered_files
+
+    while True:
+        choice_str = input("Enter file numbers to download (e.g., 1 3 5), 'a' for all, or 'e' to exit: ")
+        if choice_str.lower() == 'e':
+            print("Exiting.")
+            break
+
+        files_to_download_now = []
+        try:
+            if choice_str.lower() == 'a':
+                files_to_download_now = final_list_for_selection
+            else:
+                cleaned_str = choice_str.replace(',', ' ')
+                final_indices = [int(i) - 1 for i in cleaned_str.split()]
+                if all(0 <= i < len(final_list_for_selection) for i in final_indices):
+                    files_to_download_now = [final_list_for_selection[i] for i in final_indices]
+                else:
+                    print("Invalid number. Please select valid files from the list.")
+                    continue
+        except ValueError:
+            print("Invalid input. Please enter numbers separated by spaces.")
+            continue
+
+        if not files_to_download_now:
+            print("No files selected for download.")
+            continue
+
+        print(f"\n--- Downloading {len(files_to_download_now)} file(s) ---")
+        for file_info in files_to_download_now:
+            print(f"Downloading '{file_info.get('display_name', file_info['name'])}'...")
+            try:
+                scraper.download_file(file_info['id'], file_info['name'], file_info['mimeType'])
+            except Exception as e:
+                print(f"Failed to download {file_info['name']}. Error: {e}")
+        print("---------------------------------")
+        print("\nDownloads complete. You can select more files from the list above or enter 'e' to exit.")
 
 
 # ==========================================
@@ -158,15 +262,4 @@ if __name__ == "__main__":
     from dotenv import load_dotenv
     load_dotenv()
 
-    files_to_process = google_drive()
-
-    if files_to_process:
-        print("\n--- Processing selected files ---")
-        scraper = GoogleDriveScraper()
-        for file_info in files_to_process:
-            print(f"Downloading '{file_info['name']}'...")
-            try:
-                scraper.download_file(file_info['id'], file_info['name'], file_info['mimeType'])
-            except Exception as e:
-                print(f"Failed to download {file_info['name']}. Error: {e}")
-        print("---------------------------------")
+    google_drive()
