@@ -2,6 +2,13 @@ import os
 import re
 import requests
 
+"""
+we need to set up 
+    GOOGLE_DRIVE_API_KEY=xyz   
+in .env files
+
+AIzaSyBjpp5FXyV9saX7y8KDhrWnxMEDfeYNYjE
+"""
 
 class GoogleDriveScraper:
     def __init__(self, api_key=None):
