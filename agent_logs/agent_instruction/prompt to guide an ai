@@ -1,0 +1,4 @@
+Just so i cant work efficiently accross different device i would like to have a folder name agent_logs
+in which we will store details, instruction chances, reason and etc for each responce and each session, so next time i can just call those files accross my device to make sure we are working in async on this project.
+
+So right now as well do that and if possible do this add on after each responce.

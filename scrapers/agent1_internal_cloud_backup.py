@@ -66,14 +66,6 @@ Usage — PyCharm Run button:
 Usage — CLI:
   python agent1_internal_cloud.py path/to/file.txt
   python agent1_internal_cloud.py raw/
-
-Usage with google_cloud— called from another script:
-
-from scrapers.agent1_internal_cloud import agent1_internal_drive
-
-# This will trigger the Google Drive prompts, download the files,
-# and then immediately run Agent 1 on them!
-results = agent1_internal_drive(output_dir="./drive_signals")
 """
 
 from __future__ import annotations
@@ -90,9 +82,6 @@ from pathlib import Path
 from datetime import datetime, timezone
 from dataclasses import dataclass, field, asdict
 from typing import List, Dict, Optional, Any, Tuple, Union
-
-# Import the google_drive function
-from scrapers.google_drive import google_drive
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIGURATION
@@ -710,30 +699,6 @@ class _Processor:
 # ─────────────────────────────────────────────────────────────────────────────
 # PUBLIC API  (drop-in replacement for agent1_internal.py)
 # ─────────────────────────────────────────────────────────────────────────────
-
-def agent1_internal_drive(
-        output_dir: str = "./signals",
-        hf_token: str = HF_TOKEN,
-) -> Union[InternalResult, List[InternalResult], None]:
-    """
-    Processes files selected interactively from Google Drive.
-    """
-    log.info("Starting Google Drive file selection...")
-
-    # The google_drive function now returns a list of local file paths
-    downloaded_files = google_drive(save_directory=output_dir)
-
-    if not downloaded_files:
-        log.warning("No files were downloaded from Google Drive. Exiting.")
-        return None
-
-    log.info(f"Processing {len(downloaded_files)} files from Google Drive...")
-    return agent1_internal(
-        input_path=downloaded_files,
-        output_dir=output_dir,
-        hf_token=hf_token
-    )
-
 
 def agent1_internal(
     input_path : Union[str, Path, List[Union[str, Path]]],

@@ -1,0 +1,14 @@
+{
+    "project_name": "Stock Gro",
+    "domain": "http://stockgro.com/",
+    "ingestion_date": "2026-05-21T16:23:14.884145",
+    "data_sources": {},
+    "processing_status": {
+        "agent2_insights_extracted": false,
+        "agent3_synthesis_done": false,
+        "agent4_product_brief_done": false
+    },
+    "agent2_output": {},
+    "agent3_output": {},
+    "agent4_output": {}
+}

@@ -1,0 +1,19 @@
+{
+    "project_name": "stockly",
+    "domain": null,
+    "ingestion_date": "2026-05-21T16:04:04.128720",
+    "data_sources": {
+        "internal_transcripts": {
+            "status": "error",
+            "error": "Missing GOOGLE_DRIVE_API_KEY in environment variables."
+        }
+    },
+    "processing_status": {
+        "agent2_insights_extracted": false,
+        "agent3_synthesis_done": false,
+        "agent4_product_brief_done": false
+    },
+    "agent2_output": {},
+    "agent3_output": {},
+    "agent4_output": {}
+}

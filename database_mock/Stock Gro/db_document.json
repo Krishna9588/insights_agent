@@ -1,0 +1,122 @@
+{
+    "project_name": "Stock Gro",
+    "domain": "http://stockgro.com/",
+    "ingestion_date": "2026-05-21T16:17:16.414529",
+    "data_sources": {
+        "play_store": {
+            "status": "error",
+            "error": "No module named 'analyzer'"
+        },
+        "app_store": {
+            "extraction_metadata": {
+                "source": "Apple App Store (iTunes API)",
+                "extracted_at": "2026-05-21T16:17:12.843417",
+                "extraction_time_seconds": 3.56,
+                "fields_extracted": 33,
+                "country": "in",
+                "reviews_distribution": {
+                    "1": 40,
+                    "2": 40,
+                    "3": 40,
+                    "4": 40,
+                    "5": 40
+                },
+                "total_reviews_extracted": 0,
+                "status": "success"
+            },
+            "extracted_data": {
+                "metadata": {
+                    "trackId": 1533672206,
+                    "trackName": "StockGro: Trade with Experts",
+                    "bundleId": "com.stockgro.production",
+                    "trackViewUrl": "https://apps.apple.com/in/app/stockgro-trade-with-experts/id1533672206?uo=4",
+                    "artistId": 1530757460,
+                    "artistName": "StockGro",
+                    "artistViewUrl": "https://apps.apple.com/in/developer/stockgro/id1530757460?uo=4",
+                    "sellerName": "AssetGro Fintech Private Limited",
+                    "primaryGenreName": "Finance",
+                    "primaryGenreId": 6015,
+                    "genres": [
+                        "Finance"
+                    ],
+                    "genreIds": [
+                        "6015"
+                    ],
+                    "averageUserRating": 4.10242,
+                    "userRatingCount": 537,
+                    "averageUserRatingForCurrentVersion": 4.10242,
+                    "userRatingCountForCurrentVersion": 537,
+                    "price": 0.0,
+                    "formattedPrice": "Free",
+                    "currency": "INR",
+                    "isVppDeviceBasedLicensingEnabled": true,
+                    "version": "4.1.6",
+                    "releaseNotes": "We’re constantly working to make your experience better. In this update, we’ve fixed several bugs to improve stability and performance across the app. You’ll also notice smoother navigation, faster load times, and a more refined user interface designed to make everything easier to use. These enhancements ensure a more seamless and enjoyable experience every time you open the app. We appreciate your feedback, which helps us continue improving. Stay tuned for more exciting updates and features coming soon. Thank you for using our app and being part of our journey!",
+                    "releaseDate": "2020-11-03T08:00:00Z",
+                    "currentVersionReleaseDate": "2026-05-11T06:56:45Z",
+                    "description": "Simplify Your Trading Journey with StockGro – Your All-in-One Stock Market Companion\n\nUnlock smarter investing with StockGro, a powerful platform designed for traders and investors at every level. Experience intelligent insights with our new AI-powered trading tools that bring together expert research and AI stock analysis to help you make confident decisions in the market.\n\nWhether you’re focused on intraday trading, BTST setups, or long-term investing, StockGro combines human expertise, AI investing, and real-time data to support every trading style.\n\nWhy Choose StockGro?\n\n→ Expert-Driven Research, Enhanced by AI\n Access trade ideas and stock market recommendations from SEBI-registered research analysts (Registration No: INH000018300), supported by AI stock research and analytics for sharper decision-making.\n\n→ Intraday Screener & Real-Time Signals\n Identify today’s intraday stocks and uncover new opportunities using a smart screener that now integrates AI trading analytics for impro",
+                    "shortDescription": "",
+                    "minimumOsVersion": "15.0",
+                    "fileSizeBytes": 315092992,
+                    "contentAdvisoryRating": "12+",
+                    "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/ea/6a/3cea6a88-3b98-daaa-b7b1-63806e68551e/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/60x60bb.jpg",
+                    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/ea/6a/3cea6a88-3b98-daaa-b7b1-63806e68551e/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+                    "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/ea/6a/3cea6a88-3b98-daaa-b7b1-63806e68551e/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+                    "screenshotUrls": [
+                        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/23/d5/ce/23d5cec6-4d2c-790a-efd7-35476b0ef612/1.png/392x696bb.png",
+                        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/12/9a/49/129a490a-0ba9-2d55-9f59-b9c321cc72aa/2.png/392x696bb.png",
+                        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/fe/17/78/fe177864-e7ed-3da3-ceb2-bf4260734375/3.png/392x696bb.png",
+                        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/23/a0/e1/23a0e16d-c4b8-639f-819d-cde1e41b4fa5/5.png/392x696bb.png",
+                        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ab/9a/c8/ab9ac8cb-2e37-3b72-a75e-d898b0bae61a/6.png/392x696bb.png",
+                        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/40/ea/84/40ea8422-5277-ac38-80d0-850419a3c307/7.png/392x696bb.png",
+                        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a4/a2/5c/a4a25cf2-7c26-cdb2-3f2e-7f6f202206c9/8.png/392x696bb.png"
+                    ],
+                    "ipadScreenshotUrls": [],
+                    "kind": "software",
+                    "trackCensoredName": "StockGro: Trade with Experts",
+                    "privacyViewUrl": null,
+                    "supportUrl": null,
+                    "websiteUrl": null
+                },
+                "reviews": [],
+                "review_analysis": {
+                    "error": "No reviews"
+                },
+                "reviews_metadata": {
+                    "1": {
+                        "requested": 40,
+                        "fetched": 0
+                    },
+                    "2": {
+                        "requested": 40,
+                        "fetched": 0
+                    },
+                    "3": {
+                        "requested": 40,
+                        "fetched": 0
+                    },
+                    "4": {
+                        "requested": 40,
+                        "fetched": 0
+                    },
+                    "5": {
+                        "requested": 40,
+                        "fetched": 0
+                    }
+                }
+            },
+            "analysis": null
+        },
+        "youtube": {
+            "youtube_0": []
+        }
+    },
+    "processing_status": {
+        "agent2_insights_extracted": false,
+        "agent3_synthesis_done": false,
+        "agent4_product_brief_done": false
+    },
+    "agent2_output": {},
+    "agent3_output": {},
+    "agent4_output": {}
+}

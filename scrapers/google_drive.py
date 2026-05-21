@@ -7,6 +7,46 @@ we need to set up
     GOOGLE_DRIVE_API_KEY=xyz   
 in .env files
 
+## Google Drive API Key Creation Guide
+
+## 1. Create or Select a Project
+
+* Open the Google Cloud Console.
+* Sign in with your Google account.
+* Click the Project Dropdown at the top left.
+* Click New Project (or choose an existing one).
+* Enter a recognizable Project Name.
+* Click Create.
+
+## 2. Enable the Google Drive API
+
+* Open the left-hand Navigation Menu.
+* Hover over APIs & Services.
+* Select Library.
+* Search for "Google Drive API".
+* Click the Google Drive API result.
+* Click the blue Enable button.
+
+## 3. Generate Your API Key
+
+* Open the left-hand Navigation Menu.
+* Choose APIs & Services.
+* Click Credentials.
+* Click Create credentials at the top.
+* Select API key from the dropdown.
+* Copy and safely store the generated key.
+
+## 4. Restrict Your API Key
+
+* Click the Edit Icon next to your key.
+* Scroll down to API restrictions.
+* Select Restrict key.
+* Choose Google Drive API from the dropdown.
+* Go to Application restrictions.
+* Set restrictions based on your server or website.
+* Click Save.
+
+------------------------------
 """
 
 class GoogleDriveScraper:
@@ -109,9 +149,10 @@ def get_file_type(mime_type):
         return 'File'
 
 
-def google_drive():
+def google_drive(save_directory: str = "google_download"):
     """
-    Interactively prompts the user for Google Drive URLs, lets them select and download files.
+    Interactively prompts for Google Drive URLs, lets the user select and download files.
+    Returns a list of local paths to the downloaded files.
     """
     scraper = GoogleDriveScraper()
 
@@ -125,7 +166,7 @@ def google_drive():
 
     if not urls:
         print("No URLs provided.")
-        return
+        return []
 
     all_files = []
     for url in urls:
@@ -142,7 +183,7 @@ def google_drive():
 
     if not all_files:
         print("No files found in the provided locations.")
-        return
+        return []
 
     print("\n--- Available Files & Folders ---")
     for i, item in enumerate(all_files):
@@ -180,7 +221,7 @@ def google_drive():
 
     if not expanded_files:
         print("No files found in the selection.")
-        return
+        return []
 
     final_list_for_selection = expanded_files
     if needs_refinement:
@@ -224,42 +265,46 @@ def google_drive():
         print("----------------------------\n")
         final_list_for_selection = ordered_files
 
-    while True:
-        choice_str = input("Enter file numbers to download (e.g., 1 3 5), 'a' for all, or 'e' to exit: ")
-        if choice_str.lower() == 'e':
-            print("Exiting.")
-            break
+    downloaded_file_paths = []
+    
+    choice_str = input("Enter file numbers to download (e.g., 1 3 5), or 'a' for all: ")
 
-        files_to_download_now = []
-        try:
-            if choice_str.lower() == 'a':
-                files_to_download_now = final_list_for_selection
+    files_to_download_now = []
+    try:
+        if choice_str.lower() == 'a':
+            files_to_download_now = final_list_for_selection
+        else:
+            cleaned_str = choice_str.replace(',', ' ')
+            final_indices = [int(i) - 1 for i in cleaned_str.split()]
+            if all(0 <= i < len(final_list_for_selection) for i in final_indices):
+                files_to_download_now = [final_list_for_selection[i] for i in final_indices]
             else:
-                cleaned_str = choice_str.replace(',', ' ')
-                final_indices = [int(i) - 1 for i in cleaned_str.split()]
-                if all(0 <= i < len(final_list_for_selection) for i in final_indices):
-                    files_to_download_now = [final_list_for_selection[i] for i in final_indices]
-                else:
-                    print("Invalid number. Please select valid files from the list.")
-                    continue
-        except ValueError:
-            print("Invalid input. Please enter numbers separated by spaces.")
-            continue
+                print("Invalid number. Proceeding with an empty selection.")
+    except ValueError:
+        print("Invalid input. Proceeding with an empty selection.")
 
-        if not files_to_download_now:
-            print("No files selected for download.")
-            continue
+    if not files_to_download_now:
+        print("No files selected for download.")
+        return []
 
-        print(f"\n--- Downloading {len(files_to_download_now)} file(s) ---")
-        for file_info in files_to_download_now:
-            print(f"Downloading '{file_info.get('display_name', file_info['name'])}'...")
-            try:
-                scraper.download_file(file_info['id'], file_info['name'], file_info['mimeType'])
-            except Exception as e:
-                print(f"Failed to download {file_info['name']}. Error: {e}")
-        print("---------------------------------")
-        print("\nDownloads complete. You can select more files from the list above or enter 'e' to exit.")
+    print(f"\n--- Downloading {len(files_to_download_now)} file(s) ---")
+    for file_info in files_to_download_now:
+        print(f"Downloading '{file_info.get('display_name', file_info['name'])}'...")
+        try:
+            local_path = scraper.download_file(
+                file_info['id'], 
+                file_info['name'], 
+                file_info['mimeType'], 
+                save_directory=save_directory
+            )
+            if local_path not in downloaded_file_paths:
+                downloaded_file_paths.append(local_path)
+        except Exception as e:
+            print(f"Failed to download {file_info['name']}. Error: {e}")
+    print("---------------------------------")
+    print("\nDownloads complete. Returning to orchestrator.")
 
+    return downloaded_file_paths
 
 # ==========================================
 # Example Usage
