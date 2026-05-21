@@ -1,0 +1,1029 @@
+{
+  "extraction_metadata": {
+    "source": "Apple App Store (iTunes API)",
+    "extracted_at": "2026-05-12T20:39:29.872888",
+    "extraction_time_seconds": 4.09,
+    "fields_extracted": 33,
+    "country": "in",
+    "reviews_distribution": {
+      "1": 40,
+      "2": 40,
+      "3": 40,
+      "4": 40,
+      "5": 40
+    },
+    "total_reviews_extracted": 102,
+    "status": "success"
+  },
+  "extracted_data": {
+    "metadata": {
+      "trackId": 1533672206,
+      "trackName": "StockGro: Trade with Experts",
+      "bundleId": "com.stockgro.production",
+      "trackViewUrl": "https://apps.apple.com/in/app/stockgro-trade-with-experts/id1533672206?uo=4",
+      "artistId": 1530757460,
+      "artistName": "StockGro",
+      "artistViewUrl": "https://apps.apple.com/in/developer/stockgro/id1530757460?uo=4",
+      "sellerName": "AssetGro Fintech Private Limited",
+      "primaryGenreName": "Finance",
+      "primaryGenreId": 6015,
+      "genres": [
+        "Finance"
+      ],
+      "genreIds": [
+        "6015"
+      ],
+      "averageUserRating": 4.10242,
+      "userRatingCount": 537,
+      "averageUserRatingForCurrentVersion": 4.10242,
+      "userRatingCountForCurrentVersion": 537,
+      "price": 0.0,
+      "formattedPrice": "Free",
+      "currency": "INR",
+      "isVppDeviceBasedLicensingEnabled": true,
+      "version": "4.1.6",
+      "releaseNotes": "We’re constantly working to make your experience better. In this update, we’ve fixed several bugs to improve stability and performance across the app. You’ll also notice smoother navigation, faster load times, and a more refined user interface designed to make everything easier to use. These enhancements ensure a more seamless and enjoyable experience every time you open the app. We appreciate your feedback, which helps us continue improving. Stay tuned for more exciting updates and features coming soon. Thank you for using our app and being part of our journey!",
+      "releaseDate": "2020-11-03T08:00:00Z",
+      "currentVersionReleaseDate": "2026-05-11T06:56:45Z",
+      "description": "Simplify Your Trading Journey with StockGro – Your All-in-One Stock Market Companion\n\nUnlock smarter investing with StockGro, a powerful platform designed for traders and investors at every level. Experience intelligent insights with our new AI-powered trading tools that bring together expert research and AI stock analysis to help you make confident decisions in the market.\n\nWhether you’re focused on intraday trading, BTST setups, or long-term investing, StockGro combines human expertise, AI investing, and real-time data to support every trading style.\n\nWhy Choose StockGro?\n\n→ Expert-Driven Research, Enhanced by AI\n Access trade ideas and stock market recommendations from SEBI-registered research analysts (Registration No: INH000018300), supported by AI stock research and analytics for sharper decision-making.\n\n→ Intraday Screener & Real-Time Signals\n Identify today’s intraday stocks and uncover new opportunities using a smart screener that now integrates AI trading analytics for impro",
+      "shortDescription": "",
+      "minimumOsVersion": "15.0",
+      "fileSizeBytes": 315092992,
+      "contentAdvisoryRating": "12+",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/ea/6a/3cea6a88-3b98-daaa-b7b1-63806e68551e/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/ea/6a/3cea6a88-3b98-daaa-b7b1-63806e68551e/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+      "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3c/ea/6a/3cea6a88-3b98-daaa-b7b1-63806e68551e/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "screenshotUrls": [
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/23/d5/ce/23d5cec6-4d2c-790a-efd7-35476b0ef612/1.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/12/9a/49/129a490a-0ba9-2d55-9f59-b9c321cc72aa/2.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/fe/17/78/fe177864-e7ed-3da3-ceb2-bf4260734375/3.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/23/a0/e1/23a0e16d-c4b8-639f-819d-cde1e41b4fa5/5.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ab/9a/c8/ab9ac8cb-2e37-3b72-a75e-d898b0bae61a/6.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/40/ea/84/40ea8422-5277-ac38-80d0-850419a3c307/7.png/392x696bb.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a4/a2/5c/a4a25cf2-7c26-cdb2-3f2e-7f6f202206c9/8.png/392x696bb.png"
+      ],
+      "ipadScreenshotUrls": [],
+      "kind": "software",
+      "trackCensoredName": "StockGro: Trade with Experts",
+      "privacyViewUrl": null,
+      "supportUrl": null,
+      "websiteUrl": null
+    },
+    "reviews": [
+      {
+        "id": "13999097699",
+        "author": "sushil_pareek31",
+        "rating": 1,
+        "title": "Not allowing to sign in",
+        "content": "I have just downloaded the stock grow . But it is not allowing me to sign in",
+        "date": "2026-04-26T07:09:10-07:00",
+        "version": "4.1.4"
+      },
+      {
+        "id": "13880847118",
+        "author": "VikasPatel123",
+        "rating": 1,
+        "title": "App is not working",
+        "content": "I have purchased monthly subscription, it doest load any data trades section is not loading",
+        "date": "2026-03-23T22:01:53-07:00",
+        "version": "4.1.1"
+      },
+      {
+        "id": "13841131050",
+        "author": "Ankitsinh Taank",
+        "rating": 1,
+        "title": "App taking loading time huge",
+        "content": "Last 5 days application taking more than loading time and only processing only. Here need to some solution about that. I m using iPhone 12",
+        "date": "2026-03-12T11:45:52-07:00",
+        "version": "4.1.0"
+      },
+      {
+        "id": "13838956497",
+        "author": "Shubham2652",
+        "rating": 1,
+        "title": "Pathetic App | Trade Ideas Notifications Not Working",
+        "content": "Biggest bug/flow: Trade ideas notification/alert is not working. So if expert choses to close the trade we won’t get notified. \nSecond: When we place order via trade ideas screen it doesn’t place order with the price suggested by experts instead it does on market price and without setting stop-loss and targets. \nThird: Pathetic at loading entire app, super slow and some times Trade Ideas screen doesn’t even get refreshed.",
+        "date": "2026-03-11T20:12:38-07:00",
+        "version": "4.1.0"
+      },
+      {
+        "id": "13768449483",
+        "author": "myntraminto",
+        "rating": 1,
+        "title": "Does not work",
+        "content": "Trades tab does not working even after paying",
+        "date": "2026-02-19T20:33:05-07:00",
+        "version": "4.0.4"
+      },
+      {
+        "id": "13761805716",
+        "author": "User5641",
+        "rating": 1,
+        "title": "Issues with the app working.",
+        "content": "After some time of using the app, the app doesn’t seem to open or function as it should. In such case, deleting and reinstalling the app is required in order for the application to run as it should.",
+        "date": "2026-02-18T00:18:33-07:00",
+        "version": "4.0.3"
+      },
+      {
+        "id": "13714669125",
+        "author": "Balaji1805",
+        "rating": 1,
+        "title": "Lag issues",
+        "content": "App keep lagging and didn’t open sometimes .",
+        "date": "2026-02-04T23:09:15-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "12806688219",
+        "author": "Shahinpm",
+        "rating": 1,
+        "title": "Frustrating Experience – No Support & Broken Features",
+        "content": "I had high hopes for StockGro, but the experience has been really disappointing. The app constantly shows errors during withdrawals, and customer support is completely unresponsive — even their official email doesn’t work. I tried contacting them through the app, email, and social media with no response. It’s unacceptable for a finance-related app to be this unreliable. Until they fix their withdrawal system and offer proper support, I do NOT recommend using this app.",
+        "date": "2025-06-22T22:46:42-07:00",
+        "version": "3.9.3"
+      },
+      {
+        "id": "12224308052",
+        "author": "HarshDidntCode",
+        "rating": 1,
+        "title": "Ew",
+        "content": "Yuck",
+        "date": "2025-01-24T02:20:03-07:00",
+        "version": "3.7.4"
+      },
+      {
+        "id": "11979973260",
+        "author": "Deba420",
+        "rating": 1,
+        "title": "Wrost app ever",
+        "content": "This app is disgusting. It’s fake and showing error after i give the otp. Romove the app from app store.",
+        "date": "2024-11-22T12:42:53-07:00",
+        "version": "3.6.6"
+      },
+      {
+        "id": "11373097921",
+        "author": "Shadow89185",
+        "rating": 1,
+        "title": "Index option",
+        "content": "Why there is no index option available??",
+        "date": "2024-06-12T07:46:25-07:00",
+        "version": "3.4.4"
+      },
+      {
+        "id": "10996942984",
+        "author": "Jacob.baba",
+        "rating": 1,
+        "title": "Withdrawal problem",
+        "content": "Withdrawal problem always",
+        "date": "2024-03-01T10:34:50-07:00",
+        "version": "3.2.6"
+      },
+      {
+        "id": "10919435190",
+        "author": "adityasinghteotia",
+        "rating": 1,
+        "title": "Withdraw Not Working",
+        "content": "I am trying to withdraw from long time it’s not working, it’s only shows, “ Bank is currently not accepting Withdrawals. Please try Later”.\nPlease work on it",
+        "date": "2024-02-09T04:42:56-07:00",
+        "version": "3.2.4"
+      },
+      {
+        "id": "10880735454",
+        "author": "bhavdip24",
+        "rating": 1,
+        "title": "Withdraw",
+        "content": "Paytm wallet service is not available now.withdraw is not possible.",
+        "date": "2024-01-30T04:08:36-07:00",
+        "version": "3.2.4"
+      },
+      {
+        "id": "10719828397",
+        "author": "SohamSR",
+        "rating": 1,
+        "title": "Regarding payment method.",
+        "content": "Worst app ever. \nPayment gateway is always down while withdrawal. But while adding money it is good. \nPayments are stuck in wallet since 6-7 months.",
+        "date": "2023-12-19T15:17:50-07:00",
+        "version": "3.2.0"
+      },
+      {
+        "id": "10350583007",
+        "author": "Satvinder kang",
+        "rating": 1,
+        "title": "withdrawal problem",
+        "content": "in this app withdrawl is a bigest issue after some time and i am also facing withdrawal on my paytm number 9991290214 and my game id number also same and this app doesn’t work on my withdrawal issue i think that it is not a good app if stock gro become best app related to others if it provide withdrawal",
+        "date": "2023-09-09T07:30:35-07:00",
+        "version": "2.8.4"
+      },
+      {
+        "id": "10342895176",
+        "author": "Hritikyvvv",
+        "rating": 1,
+        "title": "App becoming worst",
+        "content": "this app’s withdrawal problem havnt been solved since 1.5 years and weekly leagues are just waste of money if you buy subscriptions",
+        "date": "2023-09-07T03:38:52-07:00",
+        "version": "2.8.4"
+      },
+      {
+        "id": "10285477888",
+        "author": "@sachin.Jahri.",
+        "rating": 1,
+        "title": "Withdraw problem",
+        "content": "StockGro",
+        "date": "2023-08-21T20:16:53-07:00",
+        "version": "2.7.3"
+      },
+      {
+        "id": "13680279852",
+        "author": "Tmn_29",
+        "rating": 3,
+        "title": "safest and easiest stock app",
+        "content": "i have used multiple apps for stock market but this has become the one i use everyday. it is very simple to use and even after using it for a very long time, there hasnt been any issues with money transfer and exchange (smth i have faced with other apps) all in all,  very good app.",
+        "date": "2026-01-26T20:56:56-07:00",
+        "version": "4.0.1"
+      },
+      {
+        "id": "13520741120",
+        "author": "Raiqahhh",
+        "rating": 3,
+        "title": "Review",
+        "content": "StockGro is an excellent, user-friendly app, perfect for anyone looking to learn about the stock market in a fun and risk-free way. What makes it great is its gamified approach: you get virtual money to trade in real-time competitions, which genuinely speeds up the learning process without risking any actual cash. It’s essentially a social platform where you can test strategies, follow top investors, and get AI-enhanced insights, turning the often-intimidating world of finance into an engaging, low-stakes game.",
+        "date": "2025-12-16T08:46:18-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "10336936315",
+        "author": "Mohabeyji",
+        "rating": 3,
+        "title": "Stockgro",
+        "content": "The app's user-generated content offers a range of viewpoints, expanding my understanding of investment strategies.",
+        "date": "2023-09-05T07:56:01-07:00",
+        "version": "2.8.4"
+      },
+      {
+        "id": "10228600079",
+        "author": "Chanchal.",
+        "rating": 3,
+        "title": "Recommend",
+        "content": "The app's investment news alerts keep me up-to-date on crucial events that impact my investments.",
+        "date": "2023-08-06T22:21:45-07:00",
+        "version": "2.7.2"
+      },
+      {
+        "id": "13931407546",
+        "author": "Dineshvmr",
+        "rating": 4,
+        "title": "Good App for new users",
+        "content": "Good",
+        "date": "2026-04-07T00:59:49-07:00",
+        "version": "4.1.2"
+      },
+      {
+        "id": "13692118018",
+        "author": "devansh1906",
+        "rating": 4,
+        "title": "Stocks Easily listed",
+        "content": "Can buy and sell without any difficulty",
+        "date": "2026-01-30T00:42:07-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13692024699",
+        "author": "Doareamonshinchan",
+        "rating": 4,
+        "title": "Stock grow",
+        "content": "Real-time data, alerts, and insights help keep users informed about market movements",
+        "date": "2026-01-29T23:59:57-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13691900264",
+        "author": "Sami._.2812",
+        "rating": 4,
+        "title": "App review",
+        "content": "A well-designed trading app with clear insights and useful tools. Easy to learn and navigate. A solid choice for beginners and experienced users.",
+        "date": "2026-01-29T23:02:38-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13691873499",
+        "author": "Cycle5678",
+        "rating": 4,
+        "title": "Good",
+        "content": "Wonderful",
+        "date": "2026-01-29T22:50:04-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13691865353",
+        "author": "stewie1100",
+        "rating": 4,
+        "title": "great app",
+        "content": "Good app with an easy-to-use interface and smooth performance. The features are useful and work well. Overall, a satisfying experience.",
+        "date": "2026-01-29T22:46:13-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13691858550",
+        "author": "Prince g3536",
+        "rating": 4,
+        "title": "Good",
+        "content": "Nice app",
+        "date": "2026-01-29T22:43:02-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13689520830",
+        "author": "Soniks111",
+        "rating": 4,
+        "title": "Nice for trading",
+        "content": "I liked the interface",
+        "date": "2026-01-29T07:43:00-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13668093398",
+        "author": "G_mittal",
+        "rating": 4,
+        "title": "Great app",
+        "content": "Most user friendly interface for the stock market such.Having a great experience with the app.",
+        "date": "2026-01-23T15:37:40-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13661775498",
+        "author": "Ritu552",
+        "rating": 4,
+        "title": "Good",
+        "content": "User friendly",
+        "date": "2026-01-21T23:09:10-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13661578518",
+        "author": "Kriti21_2",
+        "rating": 4,
+        "title": "Nice",
+        "content": "It’s really good for trading … and I had an amazing experience .. just wow .. go for it guys !",
+        "date": "2026-01-21T21:29:10-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13655680767",
+        "author": "biggbosz",
+        "rating": 4,
+        "title": "Amazing app",
+        "content": "Having a lot of fun. grate uiux",
+        "date": "2026-01-20T07:24:01-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13655282393",
+        "author": "Rachitswami",
+        "rating": 4,
+        "title": "Review",
+        "content": "Good for startup",
+        "date": "2026-01-20T05:17:10-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13556461764",
+        "author": "Garima 🫶🏻",
+        "rating": 4,
+        "title": "Great app",
+        "content": "A very easy to use app for stock marketing",
+        "date": "2025-12-26T02:45:55-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13555702259",
+        "author": "rtaneja03",
+        "rating": 4,
+        "title": "great app",
+        "content": "Risk-free stock market practice",
+        "date": "2025-12-25T20:41:05-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13537397374",
+        "author": "rivaaaaah",
+        "rating": 4,
+        "title": "Good app",
+        "content": "Everything feels neatly organized, making learning effortless.",
+        "date": "2025-12-20T20:59:04-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13535799540",
+        "author": "Tidyboi",
+        "rating": 4,
+        "title": "User friendly",
+        "content": "The mix of simple lessons and practical challenges keeps me engaged every day.",
+        "date": "2025-12-20T10:28:37-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13534160454",
+        "author": "Anaya_m",
+        "rating": 4,
+        "title": "Good app",
+        "content": "The expert breakdowns often help me understand things I completely missed.",
+        "date": "2025-12-20T01:29:43-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13531923100",
+        "author": "Vulc7n",
+        "rating": 4,
+        "title": "Good but needs improvement",
+        "content": "Very decent app but needs a bit improvement. Experts are very co-operative and interface is easy to understand",
+        "date": "2025-12-19T10:11:53-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13531103813",
+        "author": "Ryzzennn",
+        "rating": 4,
+        "title": "Trading",
+        "content": "Best app for trading.",
+        "date": "2025-12-19T05:51:52-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13530052128",
+        "author": "zahraahahaha",
+        "rating": 4,
+        "title": "Love the App",
+        "content": "The interface is smooth and responsive, which makes the experience very enjoyable.",
+        "date": "2025-12-18T22:41:02-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13530039890",
+        "author": "J.P-234",
+        "rating": 4,
+        "title": "Helpful App",
+        "content": "The notifications are helpful and timely,and they never feel excessive.",
+        "date": "2025-12-18T22:34:53-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13528699550",
+        "author": "Ethanlopes86",
+        "rating": 4,
+        "title": "Review",
+        "content": "The competitions are fun and push me to apply concepts more thoughtfully.",
+        "date": "2025-12-18T12:45:20-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13528311614",
+        "author": "strawberrywow",
+        "rating": 4,
+        "title": "review",
+        "content": "The app turns financial education into something enjoyable rather than stressful.",
+        "date": "2025-12-18T10:20:50-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13526777692",
+        "author": "Suhaninini",
+        "rating": 4,
+        "title": "Amazing app",
+        "content": "This app is a great platform to know more about stocks and investments",
+        "date": "2025-12-18T01:27:03-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13526441749",
+        "author": "Sreepath17",
+        "rating": 4,
+        "title": "Great for trading",
+        "content": "Really love the convenience that the app offers. Better than the other apps out there",
+        "date": "2025-12-17T22:44:19-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13526419865",
+        "author": "Rishi🙂",
+        "rating": 4,
+        "title": "Great app",
+        "content": "The short tutorial videos are perfect when I don’t have much time to study.",
+        "date": "2025-12-17T22:33:19-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13526396797",
+        "author": "Ali Zuhayr",
+        "rating": 4,
+        "title": "Smooth and reliable",
+        "content": "Amazing app with a smooth interface and reliable system",
+        "date": "2025-12-17T22:21:45-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13524341358",
+        "author": "Bruh.303",
+        "rating": 4,
+        "title": "Good",
+        "content": "Competing in leagues makes the learning more exciting and encourages improvement.",
+        "date": "2025-12-17T08:28:54-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13523788287",
+        "author": "Prince manodra",
+        "rating": 4,
+        "title": "A good app",
+        "content": "The app seems to get better with each update, which shows the team really listens to users.",
+        "date": "2025-12-17T05:34:17-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13523219550",
+        "author": "Jkvjkv",
+        "rating": 4,
+        "title": "Suggested",
+        "content": "It's a trustworthy app, and the user interface is quite visually appealing. This app has made trading easier for a lot of beginners.",
+        "date": "2025-12-17T02:05:52-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13523027450",
+        "author": "Tanu1712",
+        "rating": 4,
+        "title": "Trustful",
+        "content": "The profiles here reflect real effort. People share honest details about who they are, which helps in starting authentic conversations.",
+        "date": "2025-12-17T00:35:29-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13523027413",
+        "author": "finance guy 345",
+        "rating": 4,
+        "title": "Great learning platform",
+        "content": "I appreciate that StockGro offers different ways to learn — videos, articles, quizzes, and practice.",
+        "date": "2025-12-17T00:35:28-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13522724378",
+        "author": "Lol_chaitu",
+        "rating": 4,
+        "title": "Great app",
+        "content": "It's a trustworthy app and has a lot of information it’s been a great experience using this app",
+        "date": "2025-12-16T22:06:13-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13522623088",
+        "author": "nivimatunga",
+        "rating": 4,
+        "title": "Nice",
+        "content": "The expert breakdowns often help me understand things I completely missed.",
+        "date": "2025-12-16T21:15:36-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13522291179",
+        "author": "Sammyy_227",
+        "rating": 4,
+        "title": "Great app",
+        "content": "The app has made the stock market far less overwhelming and much more approachable",
+        "date": "2025-12-16T18:43:54-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13521046961",
+        "author": "mumbaiindians267",
+        "rating": 4,
+        "title": "Trustworthy app",
+        "content": "What I enjoy most is that StockGro teaches through doing — I learn while trying things out myself.",
+        "date": "2025-12-16T10:29:36-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13520947007",
+        "author": "honey bunny :/",
+        "rating": 4,
+        "title": "perfect for beginners like me :)",
+        "content": "The community is positive and perfect for beginners.",
+        "date": "2025-12-16T09:54:42-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13520558048",
+        "author": "bunny paglu",
+        "rating": 4,
+        "title": "Very nice app",
+        "content": "Very user-friendly trading app with a clean interface and smooth performance. Order execution is fast, charts are detailed, and it’s suitable for both beginners and experienced traders. Deposits and withdrawals are seamless. Overall, a reliable platform for trading and investing.",
+        "date": "2025-12-16T07:48:29-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13519099654",
+        "author": "Vande Matarm",
+        "rating": 4,
+        "title": "A good app",
+        "content": "Their verification process is strict, which gives peace of mind.",
+        "date": "2025-12-15T22:22:08-07:00",
+        "version": "3.9.26"
+      },
+      {
+        "id": "13696770617",
+        "author": "Mayank Jaggi",
+        "rating": 5,
+        "title": "Best stock app",
+        "content": "The interface of this app is so easy to use and recommended to everyone",
+        "date": "2026-01-31T05:16:33-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13693858641",
+        "author": "Aarushi Chaudhary",
+        "rating": 5,
+        "title": "Excellent app",
+        "content": "An excellent app to understand stocks without confusion.\nUser-friendly, informative, and genuinely helpful.",
+        "date": "2026-01-30T10:20:54-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13693766390",
+        "author": "Tia@29",
+        "rating": 5,
+        "title": "Amazing",
+        "content": "Stockgro is an excellent app for anyone who wants to learn about stocks, amazing user platform",
+        "date": "2026-01-30T09:50:50-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13691918049",
+        "author": "Shreshhthaaaaa",
+        "rating": 5,
+        "title": "review",
+        "content": "good app for investing and SIP’s",
+        "date": "2026-01-29T23:10:45-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13691877662",
+        "author": "Saanjh Sadhoo",
+        "rating": 5,
+        "title": "Good",
+        "content": "Great app",
+        "date": "2026-01-29T22:52:02-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13689593054",
+        "author": "Riddhi0770",
+        "rating": 5,
+        "title": "Love this app",
+        "content": "Very helpful",
+        "date": "2026-01-29T08:04:53-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13685963314",
+        "author": "JashanPAPA",
+        "rating": 5,
+        "title": "App review",
+        "content": "Its actually a very smart learning platform for anyone interested in markets. You'll get expert-backed insights",
+        "date": "2026-01-28T09:07:05-07:00",
+        "version": "4.0.2"
+      },
+      {
+        "id": "13680554808",
+        "author": "@!—-",
+        "rating": 5,
+        "title": "Nice",
+        "content": "StockGro:Trade with experts is recommended",
+        "date": "2026-01-26T23:13:03-07:00",
+        "version": "4.0.1"
+      },
+      {
+        "id": "13674724679",
+        "author": "Mantasha zubair",
+        "rating": 5,
+        "title": "Nice",
+        "content": "It made trading easy and the interface is user friendly . Excellent for beginners",
+        "date": "2026-01-25T09:04:41-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13668627321",
+        "author": "Divs42784",
+        "rating": 5,
+        "title": "Extremely helpful",
+        "content": "This app has made it so easy to understand the stock market. It helped me enhance my trading skills and make better investments.",
+        "date": "2026-01-23T19:05:30-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13668586384",
+        "author": "Ambitious987",
+        "rating": 5,
+        "title": "Excellent app",
+        "content": "StockGro is a very useful app for anyone who wants to understand the stock market in a simple and practical way.Best app for beginners.",
+        "date": "2026-01-23T18:49:26-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13667151913",
+        "author": "Suj01al",
+        "rating": 5,
+        "title": "User friendly",
+        "content": "The UI is user friendly and it is easy even for beginners. I started trading recently and this app is pretty good.",
+        "date": "2026-01-23T09:49:20-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13659042648",
+        "author": "Khurramm_xx",
+        "rating": 5,
+        "title": "Easy to use and fast.",
+        "content": "Easy to use and fast.",
+        "date": "2026-01-21T05:39:24-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13655662420",
+        "author": "Naaainnaaaa",
+        "rating": 5,
+        "title": "Review",
+        "content": "I’ve been using this trading app for a while now, and the overall experience has been quite smooth. The interface is user-friendly, making it easy even for beginners to navigate and place trades confidently. Market data is updated in real time, and the charts and tools are helpful for making informed decisions.",
+        "date": "2026-01-20T07:18:17-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13655598161",
+        "author": "Arihannn",
+        "rating": 5,
+        "title": "Review",
+        "content": "Great app! Became a pro at trading through these Sebi experts!",
+        "date": "2026-01-20T06:58:05-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13654328487",
+        "author": "Karmit Chugh",
+        "rating": 5,
+        "title": "Fun & Smart Way to Learn Stock Market",
+        "content": "StockGro makes learning the stock market easy and enjoyable. The app blends real-time market data with AI insights and verified expert tips, helping both beginners and experienced investors make smarter decisions. The interface is smooth and the educational tools are very helpful for building confidence before real investing. A great app for anyone interested in trading and investing!",
+        "date": "2026-01-19T22:20:32-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13652032768",
+        "author": "BK@0203",
+        "rating": 5,
+        "title": "Great app",
+        "content": "Provides great learning and implementation",
+        "date": "2026-01-19T07:58:14-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13650859636",
+        "author": "Anushka Bharti",
+        "rating": 5,
+        "title": "Review",
+        "content": "Got to learn so many new features related to stocks such cool app !!!",
+        "date": "2026-01-19T00:54:01-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13650851060",
+        "author": "anshita11",
+        "rating": 5,
+        "title": "good",
+        "content": "Clean UI and very beginner-friendly. I finally understand what I’m investing in instead of blindly buying tips.",
+        "date": "2026-01-19T00:49:47-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13648516905",
+        "author": "~Aafia",
+        "rating": 5,
+        "title": "Review",
+        "content": "Amazing app! \nBeen a user of it and it really helped me!",
+        "date": "2026-01-18T09:26:33-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13640668810",
+        "author": "userrrta",
+        "rating": 5,
+        "title": "Great App",
+        "content": "Helped me as a beginner",
+        "date": "2026-01-16T09:38:22-07:00",
+        "version": "4.0.0"
+      },
+      {
+        "id": "13567690514",
+        "author": "Roshannnnnnnn",
+        "rating": 5,
+        "title": "Good app",
+        "content": "The quizzes really test your brain.",
+        "date": "2025-12-28T22:15:52-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13564071694",
+        "author": "Pranay25",
+        "rating": 5,
+        "title": "Amazing App",
+        "content": "No more confusion about stocks.",
+        "date": "2025-12-28T00:55:30-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13561885752",
+        "author": "M7xhavy",
+        "rating": 5,
+        "title": "Review",
+        "content": "Best finance learning app!",
+        "date": "2025-12-27T10:42:37-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13561779614",
+        "author": "Arebhecho",
+        "rating": 5,
+        "title": "Stoxo gives amazing quick insights.",
+        "content": "Stoxo gives amazing quick insights.",
+        "date": "2025-12-27T10:09:03-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13561536540",
+        "author": "Vedika 1408",
+        "rating": 5,
+        "title": "Learned more here than from books.",
+        "content": "Learned more here than from books.",
+        "date": "2025-12-27T08:55:29-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13561200677",
+        "author": "GauravGGautam",
+        "rating": 5,
+        "title": "Feedback",
+        "content": "My portfolio confidence is better",
+        "date": "2025-12-27T07:16:19-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13557865544",
+        "author": "ANkGaba",
+        "rating": 5,
+        "title": "Now I feel I can trade smartly.",
+        "content": "Great application",
+        "date": "2025-12-26T10:16:18-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13557854392",
+        "author": "_prashansaa09",
+        "rating": 5,
+        "title": "Stock",
+        "content": "Best app for market beginners!!",
+        "date": "2025-12-26T10:12:50-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13557233972",
+        "author": "Surajit _0008",
+        "rating": 5,
+        "title": "Nice app",
+        "content": "A truly helpful trading app.",
+        "date": "2025-12-26T07:07:29-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13555863649",
+        "author": "CrispChip_24",
+        "rating": 5,
+        "title": "Nice App",
+        "content": "Trading concepts made so simple",
+        "date": "2025-12-25T22:01:10-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13552731726",
+        "author": "Kahaan326",
+        "rating": 5,
+        "title": "Exceptionally great",
+        "content": "Helped me double my money",
+        "date": "2025-12-25T02:02:26-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13546852598",
+        "author": "anmolsingh15",
+        "rating": 5,
+        "title": "Good app",
+        "content": "The challenges are very engaging.",
+        "date": "2025-12-23T09:43:35-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13546771051",
+        "author": "mishikapuri_0266",
+        "rating": 5,
+        "title": "Nice app",
+        "content": "They are doing some great work.",
+        "date": "2025-12-23T09:17:30-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13543686907",
+        "author": "Ansh lohia",
+        "rating": 5,
+        "title": "Review",
+        "content": "Stockgro’s insights are very useful and easy to understand",
+        "date": "2025-12-22T12:49:10-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13542955275",
+        "author": "!₹-/12",
+        "rating": 5,
+        "title": "nice app",
+        "content": "Their expert insights are actually good.",
+        "date": "2025-12-22T08:44:07-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13542665763",
+        "author": "#donotusethisapp",
+        "rating": 5,
+        "title": "Good",
+        "content": "Very helpful for any finance student.",
+        "date": "2025-12-22T07:15:23-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13542403502",
+        "author": "Vedaant06",
+        "rating": 5,
+        "title": "Great app",
+        "content": "Intraday trading seems possible now",
+        "date": "2025-12-22T05:55:19-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13530906582",
+        "author": "Raghavnayyar183",
+        "rating": 5,
+        "title": "Review",
+        "content": "Love how StockGro keeps me updated!, Real-time data and personalized insights.",
+        "date": "2025-12-19T04:49:28-07:00",
+        "version": "3.9.27"
+      },
+      {
+        "id": "13530050031",
+        "author": "Dhriti jain07",
+        "rating": 5,
+        "title": "Good app",
+        "content": "Helpful and insightful, works great",
+        "date": "2025-12-18T22:39:58-07:00",
+        "version": "3.9.26"
+      }
+    ],
+    "review_analysis": {
+      "total_reviews": 102,
+      "average_rating": 3.82,
+      "rating_distribution": {
+        "1": 18,
+        "2": 0,
+        "3": 4,
+        "4": 40,
+        "5": 40
+      },
+      "latest_review_date": "2026-04-26T07:09:10-07:00",
+      "oldest_review_date": "2025-12-18T22:39:58-07:00"
+    },
+    "reviews_metadata": {
+      "1": {
+        "requested": 40,
+        "fetched": 18
+      },
+      "2": {
+        "requested": 40,
+        "fetched": 0
+      },
+      "3": {
+        "requested": 40,
+        "fetched": 4
+      },
+      "4": {
+        "requested": 40,
+        "fetched": 40
+      },
+      "5": {
+        "requested": 40,
+        "fetched": 40
+      }
+    }
+  },
+  "analysis": null
+}

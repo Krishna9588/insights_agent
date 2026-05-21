@@ -23,10 +23,7 @@ import argparse
 import logging
 from typing import Optional
 
-try:
-    from agents.path import project_db_path
-except ModuleNotFoundError:
-    from path import project_db_path
+from agents.path import project_db_path
 
 log = logging.getLogger("pipeline")
 logging.basicConfig(
@@ -38,34 +35,22 @@ ORDER = ["agent1", "agent2", "agent3", "agent4"]
 
 
 def _run_agent1(payload: dict) -> str:
-    try:
-        from agents.agent1_orchestrator import orchestrate_agent_1
-    except ModuleNotFoundError:
-        from agent1_orchestrator import orchestrate_agent_1
+    from agents.agent1_orchestrator import orchestrate_agent_1
     return asyncio.run(orchestrate_agent_1(payload))
 
 
 def _run_agent2(project_name: str, provider: str) -> dict:
-    try:
-        from agents.agent2_insight import run_agent2
-    except ModuleNotFoundError:
-        from agent2_insight import run_agent2
+    from agents.agent2_insight import run_agent2
     return run_agent2(project_name, provider=provider)
 
 
 def _run_agent3(project_name: str, provider: str) -> dict:
-    try:
-        from agents.agent3_synthesis import run_agent3
-    except ModuleNotFoundError:
-        from agent3_synthesis import run_agent3
+    from agents.agent3_synthesis import run_agent3
     return run_agent3(project_name, provider=provider)
 
 
 def _run_agent4(project_name: str, provider: str) -> dict:
-    try:
-        from agents.agent4_brief import run_agent4
-    except ModuleNotFoundError:
-        from agent4_brief import run_agent4
+    from agents.agent4_brief import run_agent4
     return run_agent4(project_name, provider=provider)
 
 

@@ -1,0 +1,147 @@
+Meeting Transcript: Stockgro User Experience and App Improvements
+
+Date: May 12 2026
+Duration: 60 Minutes
+Attendees:
+
+* Ajay: Founder of Stockgro
+* Neha: Product Manager at Stockgro
+* Rahul: Lead Engineer at Stockgro
+* Karan: Beginner User
+* Pooja: Expert Trader and Group Admin
+
+Ajay: Hello everyone. Welcome to our feedback meeting today. Thank you for joining us. We want to make Stockgro the best place to learn about the stock market. We are here to listen to your honest thoughts.
+
+Neha: Thank you Ajay. Hi everyone. I am Neha. I look after the product features here. We want to know how you use our app every day. Your ideas help us build better tools.
+
+Karan: Hi Ajay and Neha. I am Karan. I joined Stockgro three months ago. I am very new to the stock market. I use the virtual money to practice trading. I really enjoy it.
+
+Pooja: Hello everyone. I am Pooja. I have been using the app for over two years. I manage a large social group on the platform. I help new users learn how to trade. I am excited to share my feedback.
+
+Rahul: Hi Karan and Pooja. I am Rahul. I lead the engineering team here. I make sure the app runs fast and without errors. I am taking notes today. I want to hear about any bugs or slow screens you see.
+
+Ajay: Let us start with the beginner experience. Karan, you mentioned using virtual money. How do you feel about your first few weeks on the platform?
+
+Karan: The virtual money is a great idea. It removes the fear of losing real money. I started with ten lakh virtual rupees. I bought some shares of big companies. It was fun to see the numbers go up and down.
+
+Neha: That is wonderful to hear Karan. Did you find it easy to buy your first stock? Was the screen clear to you?
+
+Karan: Buying was easy. But finding the right stock was a bit hard. I tried to search for some small companies. The search bar gave me too many results. It was confusing to know which one to pick.
+
+Rahul: I understand Karan. The search tool looks at all listed companies. Sometimes the names are very similar. We can change how the search results look. We can show the most popular companies at the top.
+
+Karan: Yes that would be very helpful. When I type a name, I want to see the famous company first. Right now, I have to scroll down a lot.
+
+Ajay: We will fix that search priority Rahul. That is an easy change. Karan, what about the learning sections? Do you read the articles we post?
+
+Karan: I try to read them. But sometimes the language is too difficult. The articles use very big financial words. I do not understand them. It makes me stop reading.
+
+Neha: I am sorry about that Karan. We need to keep things simple. We want everyone to understand the stock market. We will tell our writers to use easy English. We will remove all the heavy terms.
+
+Karan: Thank you Neha. I prefer short sentences. I also like when the text is in small paragraphs. Big blocks of text are hard to read on a mobile phone.
+
+Pooja: I agree with Karan. My followers always ask me to explain your articles. The content is good but it needs to be much simpler. People want quick information.
+
+Ajay: This is clear feedback. We will simplify our writing style immediately. Now Pooja, let us talk about your experience. You are an expert user. You use the social features a lot.
+
+Pooja: Yes Ajay. The social groups are the best part of Stockgro. I have a group with five thousand members. We discuss trades every morning. It is very active.
+
+Neha: That is amazing Pooja. What problems do you face while managing such a big group?
+
+Pooja: The main problem is the chat speed. When the market opens at nine in the morning, everyone sends messages at once. The chat becomes very slow. Sometimes it freezes for a few seconds.
+
+Rahul: I have seen this issue in our system logs Pooja. Having thousands of messages per second puts a heavy load on our servers. We are working on a fix. We will split the chat traffic to make it faster.
+
+Pooja: That is good to know Rahul. When the chat freezes, people panic. They think they missed a big trading move. Fast chat is very important for us.
+
+Neha: We agree Pooja. We will make sure the chat can handle morning traffic. What other features do you need for your group?
+
+Pooja: I need a way to pin messages better. I share my daily trading plan every morning. I want this plan to stay at the top of the screen all day. Right now, new messages push my plan out of view.
+
+Rahul: We have a pin feature but maybe it is not working well for you. Does it disappear when someone replies?
+
+Pooja: Yes exactly. I want a special board at the top of the group chat. Only the admin should be able to write there. It will be like an announcement board.
+
+Ajay: An announcement board is a brilliant idea. It keeps the important information separate from the casual chat. Neha, let us add this to our plan for the next month.
+
+Neha: Definitely Ajay. I have written it down. Pooja, how do you share your virtual portfolio with your group?
+
+Pooja: I have to take a screenshot of my screen. Then I post the picture in the chat. It takes too much time. I wish there was a share button directly on my portfolio page.
+
+Karan: I would love that too. I want to show my friends the stocks I bought. A quick share button would be very nice.
+
+Rahul: We can build a direct share button. It will create a clean card with your top stocks and your total return. You can send it to Stockgro groups or even WhatsApp.
+
+Pooja: Yes please. That would save me so much time. It also looks much better than a normal phone screenshot.
+
+Ajay: Let us talk about the tournaments. These are very popular. Karan, do you play the daily trading games?
+
+Karan: I tried playing a few times. But I stopped. I always lose. The expert traders are too fast. They make a lot of profit in one hour. I cannot compete with them.
+
+Neha: We hear this often from new users. The competition is very tough. It can be discouraging for beginners.
+
+Karan: Yes it is. Could you make different levels for the tournaments? Maybe one game only for beginners. And a different game for experts like Pooja.
+
+Pooja: I completely agree with Karan. It is not fair for him to play against me. I know all the market tricks. A beginner tournament would help new people learn without stress.
+
+Ajay: That is a very fair point. We have one big pool right now. We should create leagues. A bronze league for new users. A gold league for experts.
+
+Neha: I love the league idea. We can base it on how long they have used the app or their past scores. Users will feel much better playing against people with the same skill.
+
+Rahul: I can create the logic for the leagues. We will look at user data to group them correctly. This will make the games much more fun for everyone.
+
+Karan: That sounds perfect. If I know I am playing against other beginners, I will try the games again. It gives me a fair chance to win a prize.
+
+Ajay: Rahul, how is the app performing on different phones? We have links on both the Play Store and the App Store. Are there any differences?
+
+Rahul: The Android app on the Play Store is very stable. Most of our users are on Android. But we do have some small issues with the Apple app on the App Store.
+
+Pooja: Yes I use an Apple phone. The app is mostly good. But when I open a detailed stock chart, the app closes by itself sometimes. It happens at least once a week.
+
+Rahul: I apologize for that Pooja. The charts use a lot of phone memory. Older Apple phones struggle with it. We are rewriting the chart code right now. The next update will fix this crashing issue.
+
+Pooja: Thank you Rahul. Also the notifications on my Apple phone are delayed. I get the alert for a new group message two minutes late. In trading, two minutes is a very long time.
+
+Rahul: That is a known issue with the Apple push service. We are working with a new partner to send alerts faster. You should see a big improvement soon.
+
+Ajay: Speed is everything in our business. We cannot have slow alerts. Please make this a top priority Rahul.
+
+Rahul: I will Ajay. We have a team working on it full time.
+
+Neha: Let us discuss the user profile page. Karan, do you check your own profile often?
+
+Karan: Yes I do. I like seeing my total rank. But the page looks a bit empty. I only see my name and my rank number.
+
+Neha: What else would you like to see on your profile?
+
+Karan: Maybe a badge system. If I complete my first trade, I get a badge. If I read five learning articles, I get another badge. It makes learning feel like a game.
+
+Pooja: Badges are a great idea. I would love an expert badge next to my name. It helps new users know they can trust my advice.
+
+Ajay: Gamification always works well. Badges will keep users motivated. We can give small virtual cash rewards when they unlock a new badge.
+
+Neha: I will design a full badge system. We will reward users for good habits. Things like logging in daily or keeping a diverse portfolio.
+
+Karan: I really like that idea. It gives me goals to reach every day.
+
+Ajay: This has been a very useful conversation. We have a clear list of things to do. We need to fix the search tool. We will simplify our writing.
+
+Neha: We will also fix the chat speed for large groups. We will add an announcement board. And we will build a direct share button for portfolios.
+
+Rahul: I will work on splitting the tournaments into beginner and expert leagues. I will also fix the chart crashes and delayed alerts on the Apple app.
+
+Ajay: And we will add the new badge system to user profiles. Karan and Pooja, thank you so much for your time. Your input is making Stockgro better.
+
+Pooja: You are very welcome. I am happy you listen to the users. I will tell my group that good changes are coming.
+
+Karan: Thank you for having me. I look forward to the beginner tournaments. I will definitely participate in those.
+
+Neha: We will send you an email when the new features are ready. We would love for you to test them first. Have a great day ahead.
+
+Rahul: Goodbye everyone. Thank you for the feedback.
+
+Pooja: Bye. Have a good evening.
+
+Karan: Bye everyone.
+
+Ajay: Thank you. Closing the call now.

@@ -1,0 +1,119 @@
+{
+    "company_name": "Liquide (Liquide Solutions Private Limited)",
+    "domain": "liquide.life",
+    "playstore_link": "https://play.google.com/store/apps/details?id=life.liquide.stockinvestmentapp",
+    "appstore_link": "https://apps.apple.com/in/app/liquide-stocks-mutual-funds/id1612716027",
+    "youtube_official_channel": "https://www.youtube.com/@LiquideApp",
+    "linkedin_company_page": "https://www.linkedin.com/company/liquidehq",
+    "year_founded": "2021 — Bengaluru, India",
+    "names_of_founders": [
+        "Anuj Bajpai",
+        "Paritosh Gunjan",
+        "Aniket Shirke",
+        "Kunal Ambasta",
+        "Ipek Ergur"
+    ],
+    "c-suite_officer": [
+        "Anuj Bajpai - Founder & CEO",
+        "Kunal Ambasta - Co-Founder - COO & CIO",
+        "Aniket Shirke - Co-Founder & CDAO",
+        "Paritosh Gunjan - Co-Founder",
+        "Ipek Ergur - Founder & Creative Director"
+    ],
+    "employee_count": "69",
+    "exact_hq_location": "Signet Wing A, Cessna Business Park, Bengaluru, Karnataka 560103, India",
+    "locations_operating_in": [
+        "India",
+        "Singapore (planned for NRI investors)",
+        "US (planned for NRI investors)",
+        "Canada (planned for NRI investors)",
+        "UK (planned for NRI investors)",
+        "UAE (planned for NRI investors)",
+        "Australia (planned for NRI investors)"
+    ],
+    "industry_and_segment": "Wealthtech, Financial Services, Stock Investment Advisory, FinTech, Mobile Apps, Educational and Training Services (B2C)",
+    "available_platforms": "Web & Mobile (both)",
+    "funding_raised": "Approximately $4.0M",
+    "funding_stage": "Pre-Seed, Seed, Venture Capital-Backed",
+    "no_of_users": "Over 50,000 (close to 60,000 paying subscribers as of Feb 2026)",
+    "annual_revenue": "INR 26.9 Cr (approx. $3.2M USD) as on March 31, 2025",
+    "key_positioning": "AI-enabled wealth advisory platform providing stock trading ideas, research analysis, and portfolio management to empower retail and mass-affluent investors.",
+    "revenue_model": "Subscription-based",
+    "pricing_tiers": [
+        "Annual Subscription: INR 5,000 (approx. $60 USD)",
+        "3-Month Membership: INR 2,999 (approx. $36 USD)"
+    ],
+    "target_customer_segments": [
+        "Mass-affluent investors in India",
+        "New stock market investors",
+        "Retail investors",
+        "NRI investors"
+    ],
+    "tech_stack_highlights": [
+        "AI/ML-driven investment models",
+        "Supervised Machine Learning Algorithms"
+    ],
+    "milestones": [
+        "Founded: 2021",
+        "Pre-seed funding of $2.2M: August 2022",
+        "Mobile app launch and over 35,000 downloads: August 2022",
+        "Raised INR 150 million (approx. $1.8M USD) in venture funding: February 2026",
+        "Preparing to enter the brokerage business: February 2026"
+    ],
+    "new_features_launched": [
+        "AI-Powered BOT - LiMo (real-time BUY/SELL/HOLD suggestions): August 2022",
+        "Portfolio Red Flags (analysis for negative stocks): July 2023",
+        "IPO Verdicts (expert advice on IPOs): May 2024",
+        "Stock Alerts (personalized notifications for target prices): May 2024",
+        "Stock Insights (real-time updates): May 2024"
+    ],
+    "recent_partnerships_and_integrations": [
+        {
+            "partner": "Zerodha, Upstox, Groww (brokerage accounts)",
+            "type": "Integration",
+            "description": "Building a plug-and-play stock advisory layer to power existing brokerage accounts, enabling users to login and access insights through their existing broker accounts.",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwWsHVNdC0K_poAR2ZARRugMAsAeYQvz2YECOVc_sJvUMYD6z480wd2HoBUtM_mLqrSObpH6d884Pc5W_fzwHNFsMQEcYO0SZrv8rUPOSoUqM5pzppUkBk2CFNY1Xv9sWcltfG1n8TMn2RXsCZriB9qKRI1GXfuVJU788OgW_Y3lRni5Ah077eVDHHWHrLRo794WnKh43ZCAhgjdnruIYG7W7PSXLEMf3Vb3dZrYAHRHdM6hRVCmbOEkJ_5Yy0W866au_cCSJPYnOd58c",
+            "date": "August 2022"
+        },
+        {
+            "partner": "OTP Ventures Fund",
+            "type": "Investment",
+            "description": "Led a new funding round of approximately INR 15 crore (approx. $1.8M USD).",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTwyrEf1ohqHzJbLPeztYNVcVc7dVbu3wbODgE_AAPAQc6UHUVOoQ2a8o9sco2ynd2rezi41a4iorSVSQxfxp0h6V3-tUioThkbmYCaDlY73oxPp8iHPaWQGPCO4tvfN_nvutEJw2MipVjYbTCTPPs8uyl0mV2lJRQfn8SjGYBjtK32n8Owa3A4ZnK2jfKJPx3poRKyR6RiwJ3pj5NNcvi0Jj9lCA1hdRqZWg",
+            "date": "2026-02-17"
+        },
+        {
+            "partner": "M Venture Partners",
+            "type": "Investment",
+            "description": "Co-led a new funding round of approximately INR 15 crore (approx. $1.8M USD).",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTwyrEf1ohqHzJbLPeztYNVcVc7dVbu3wbODgE_AAPAQc6UHUVOoQ2a8o9sco2ynd2rezi41a4iorSVSQxfxp0h6V3-tUioThkbmYCaDlY73oxPp8iHPaWQGPCO4tvfN_nvutEJw2MipVjYbTCTPPs8uyl0mV2lJRQfn8SjGYBjtK32n8Owa3A4ZnK2jfKJPx3poRKyR6RiwJ3pj5NNcvi0Jj9lCA1hdRqZWg",
+            "date": "2026-02-17"
+        }
+    ],
+    "competitors": [
+        {
+            "name": "The Motley Fool",
+            "domain": "fool.com"
+        },
+        {
+            "name": "Seeking Alpha",
+            "domain": "seekingalpha.com"
+        },
+        {
+            "name": "Univest",
+            "domain": "univest.in"
+        },
+        {
+            "name": "StockEdge",
+            "domain": "stockedge.com"
+        }
+    ],
+    "current_problems_struggling_with": [],
+    "user_complaints": [],
+    "differentiators": [],
+    "strategic_moves": [],
+    "regulatory_and_legal_issues": [],
+    "market_sentiment": {},
+    "other_crucial_details": [],
+    "_phase_b_note": "Phase B (deep analysis) failed — all models exhausted."
+}

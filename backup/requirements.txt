@@ -1,0 +1,74 @@
+# Core Framework
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Database
+sqlalchemy
+sqlite3
+supabase
+alembic
+chromadb
+psycopg2-binary
+
+# Vector Database & Embeddings
+sentence-transformers
+langchain
+langchain-community
+supabase-py
+
+# AI Services
+huggingface-hub
+transformers
+torch
+google-genai
+anthropic
+
+# Web Scraping
+apify-client
+urllib3<2.0
+requests
+beautifulsoup4
+google-play-scraper
+youtube-transcript-api
+yt-dlp
+
+# Google Drive connector
+google-api-python-client
+google-auth
+google-auth-oauthlib
+
+# Document/transcript parsing and reports
+openpyxl
+xlrd
+python-docx
+pillow
+scikit-learn
+
+# Caching & Async
+redis
+aioredis
+celery
+python-socketio
+python-socketio-client
+
+# Utilities
+python-dotenv
+httpx
+tenacity
+nltk
+pytz
+schedule
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
+
+# MCP (Model Context Protocol)
+mcp
+
+# Frontend (will be installed separately via npm)
+# node-modules managed in frontend/
+

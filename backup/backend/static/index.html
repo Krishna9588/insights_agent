@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insights Platform</title>
+  <style>
+    :root {
+      --canvas: #050506;
+      --surface: #0b0c0e;
+      --panel: #111316;
+      --panel-2: #171a1e;
+      --line: rgba(255,255,255,.10);
+      --line-2: rgba(255,255,255,.18);
+      --ink: #f6f7f9;
+      --text: rgba(246,247,249,.80);
+      --muted: rgba(246,247,249,.52);
+      --soft: rgba(246,247,249,.32);
+      --green: #37d67a;
+      --blue: #4da3ff;
+      --amber: #ffb84d;
+      --red: #ff5c7a;
+      --radius: 8px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--canvas);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 14px;
+      overflow: hidden;
+    }
+
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+
+    .shell { height: 100vh; display: grid; grid-template-columns: 238px 1fr; }
+    .sidebar {
+      border-right: 1px solid var(--line);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .brand { padding: 20px 18px 16px; border-bottom: 1px solid var(--line); }
+    .brand-title { color: var(--ink); font-size: 16px; font-weight: 650; letter-spacing: -.02em; }
+    .brand-sub { color: var(--muted); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; margin-top: 3px; }
+    .project-select { margin: 14px 12px; padding: 10px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--panel); }
+    .project-select label { display: block; color: var(--muted); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 7px; }
+    .project-select select { width: 100%; }
+    .nav-label { color: var(--soft); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; padding: 14px 18px 6px; }
+    .nav button {
+      width: calc(100% - 16px);
+      margin: 2px 8px;
+      background: transparent;
+      border: 0;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 11px;
+      border-radius: var(--radius);
+      text-align: left;
+    }
+    .nav button:hover, .nav button.active { background: var(--panel); color: var(--ink); }
+    .nav .badge { margin-left: auto; color: var(--soft); font-size: 11px; font-family: var(--mono); }
+    .side-footer { margin-top: auto; padding: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+
+    .main { min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+    .topbar {
+      height: 56px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 22px;
+    }
+    .top-title { color: var(--ink); font-weight: 650; flex: 1; }
+    .status-pill {
+      border: 1px solid var(--line-2);
+      border-radius: 999px;
+      padding: 5px 10px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+    .status-pill.ok { color: var(--green); border-color: rgba(55,214,122,.35); }
+    .content { flex: 1; min-height: 0; overflow: auto; padding: 22px; }
+    .page { display: none; }
+    .page.active { display: block; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      min-width: 0;
+    }
+    .span-3 { grid-column: span 3; }
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+    .card-title { color: var(--muted); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 13px; }
+    .metric { color: var(--ink); font-size: 26px; line-height: 1; font-weight: 650; letter-spacing: -.04em; }
+    .metric-sub { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    .field { display: grid; gap: 6px; margin-bottom: 11px; }
+    .field label { color: var(--muted); font-size: 12px; }
+    input, textarea, select {
+      width: 100%;
+      background: var(--panel);
+      border: 1px solid var(--line-2);
+      color: var(--ink);
+      border-radius: var(--radius);
+      padding: 9px 10px;
+      outline: none;
+    }
+    textarea { min-height: 94px; resize: vertical; line-height: 1.5; }
+    input:focus, textarea:focus, select:focus { border-color: rgba(77,163,255,.55); }
+    .row { display: flex; gap: 9px; align-items: center; flex-wrap: wrap; }
+    .btn {
+      border: 1px solid var(--line-2);
+      background: var(--panel);
+      color: var(--ink);
+      border-radius: var(--radius);
+      padding: 9px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+    .btn.primary { background: var(--ink); color: #000; border-color: var(--ink); }
+    .btn.blue { color: var(--blue); border-color: rgba(77,163,255,.35); }
+    .btn.green { color: var(--green); border-color: rgba(55,214,122,.35); }
+    .btn:disabled { opacity: .45; cursor: not-allowed; }
+    .log {
+      background: #07080a;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      min-height: 150px;
+      max-height: 280px;
+      overflow: auto;
+      padding: 12px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      color: rgba(246,247,249,.72);
+    }
+    .list { display: grid; gap: 8px; }
+    .item {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 11px;
+      display: grid;
+      gap: 5px;
+    }
+    .item strong { color: var(--ink); font-size: 13px; }
+    .item small { color: var(--muted); }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 8px;
+      color: var(--muted);
+      font-size: 11px;
+      font-family: var(--mono);
+    }
+    .tag.green { color: var(--green); border-color: rgba(55,214,122,.35); }
+    .tag.amber { color: var(--amber); border-color: rgba(255,184,77,.35); }
+    .tag.blue { color: var(--blue); border-color: rgba(77,163,255,.35); }
+    .chat {
+      height: 430px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #07080a;
+    }
+    .chat-messages { flex: 1; overflow: auto; padding: 14px; display: grid; align-content: start; gap: 10px; }
+    .msg { max-width: 82%; padding: 11px 12px; border-radius: var(--radius); line-height: 1.55; }
+    .msg.user { justify-self: end; color: var(--ink); background: var(--panel-2); }
+    .msg.bot { justify-self: start; background: var(--surface); border: 1px solid var(--line); }
+    .chat-input { border-top: 1px solid var(--line); padding: 10px; display: flex; gap: 8px; background: var(--surface); }
+    .chat-input input { flex: 1; }
+
+    @media (max-width: 980px) {
+      body { overflow: auto; }
+      .shell { height: auto; min-height: 100vh; grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-12 { grid-column: span 12; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-title">Insights Platform</div>
+        <div class="brand-sub">Internal Research OS</div>
+      </div>
+      <div class="project-select">
+        <label>Project</label>
+        <select id="project-select"></select>
+      </div>
+      <div class="nav-label">Workspace</div>
+      <nav class="nav">
+        <button class="active" data-page="dashboard"><span>Dashboard</span><span class="badge">live</span></button>
+        <button data-page="transcripts"><span>Transcripts</span></button>
+        <button data-page="company"><span>Company Profile</span></button>
+        <button data-page="social"><span>Social Intelligence</span></button>
+        <button data-page="news"><span>News Monitors</span></button>
+        <button data-page="copilot"><span>Copilot</span></button>
+      </nav>
+      <div class="side-footer">
+        <div id="backend-url">API: same origin</div>
+        <div id="last-refresh">Not refreshed yet</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="top-title" id="top-title">Dashboard</div>
+        <button class="btn" onclick="refreshAll()">Refresh</button>
+        <span class="status-pill" id="api-status">checking</span>
+      </header>
+      <section class="content">
+        <div class="page active" id="page-dashboard">
+          <div class="grid">
+            <div class="card span-3"><div class="card-title">Projects</div><div class="metric" id="m-projects">0</div><div class="metric-sub">stored research workspaces</div></div>
+            <div class="card span-3"><div class="card-title">Jobs</div><div class="metric" id="m-jobs">0</div><div class="metric-sub">pipeline runs tracked</div></div>
+            <div class="card span-3"><div class="card-title">News Monitors</div><div class="metric" id="m-news">0</div><div class="metric-sub">scheduled intelligence queries</div></div>
+            <div class="card span-3"><div class="card-title">Backend</div><div class="metric" id="m-health">...</div><div class="metric-sub">FastAPI service state</div></div>
+            <div class="card span-7">
+              <div class="card-title">Projects</div>
+              <div class="list" id="project-list"></div>
+            </div>
+            <div class="card span-5">
+              <div class="card-title">Recent Jobs</div>
+              <div class="list" id="job-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="page-transcripts">
+          <div class="grid">
+            <div class="card span-6">
+              <div class="card-title">Local Transcript Test</div>
+              <div class="field"><label>Project name</label><input id="local-project" value="Stockgro"></div>
+              <div class="field"><label>File or folder path</label><input id="local-path" value="/Users/krishnabirla/PycharmProjects/insights/transcript_input"></div>
+              <div class="field"><label>Provider</label><select id="local-provider"><option>gemini</option><option>gemini_2</option><option>openai</option><option>claude</option></select></div>
+              <div class="row"><button class="btn primary" onclick="runLocalTranscript()">Run Transcript Pipeline</button><span class="tag amber">uses LLM</span></div>
+            </div>
+            <div class="card span-6">
+              <div class="card-title">Google Drive Folder</div>
+              <div class="field"><label>Project name</label><input id="drive-project" value="Stockgro"></div>
+              <div class="field"><label>Drive folder id</label><input id="drive-folder" placeholder="Google Drive folder id"></div>
+              <div class="field"><label>Credentials path</label><input id="drive-creds" placeholder="/absolute/path/client_secret.json"></div>
+              <div class="row"><button class="btn blue" onclick="runDriveSync()">Sync Drive and Run Pipeline</button><span class="tag">new files only</span></div>
+            </div>
+            <div class="card span-12"><div class="card-title">Transcript Activity</div><div class="log" id="transcript-log"></div></div>
+          </div>
+        </div>
+
+        <div class="page" id="page-company">
+          <div class="grid">
+            <div class="card span-5">
+              <div class="card-title">Company Profile Run</div>
+              <div class="field"><label>Company</label><input id="company-name" value="Stockgro"></div>
+              <div class="field"><label>Domain</label><input id="company-domain" value="https://www.stockgro.club/"></div>
+              <div class="field"><label>Provider</label><select id="company-provider"><option>gemini</option><option>gemini_2</option></select></div>
+              <button class="btn primary" onclick="runCompany()">Research Company</button>
+            </div>
+            <div class="card span-7"><div class="card-title">Company Output</div><div class="log" id="company-log"></div></div>
+          </div>
+        </div>
+
+        <div class="page" id="page-social">
+          <div class="grid">
+            <div class="card span-6">
+              <div class="card-title">Social Intelligence Run</div>
+              <div class="field"><label>Project</label><input id="social-project" value="Stockgro"></div>
+              <div class="field"><label>Play Store app/package</label><input id="play-store-id" placeholder="com.assetgro.stockgro.prod"></div>
+              <div class="field"><label>App Store app/id</label><input id="app-store-id" placeholder="StockGro"></div>
+              <div class="field"><label>Reddit query</label><input id="reddit-query" value="stocks"></div>
+              <div class="field"><label>YouTube search</label><input id="youtube-query" value="Stockgro app review"></div>
+              <button class="btn primary" onclick="runSocial()">Run Selected Scrapers</button>
+            </div>
+            <div class="card span-6"><div class="card-title">Social Output</div><div class="log" id="social-log"></div></div>
+          </div>
+        </div>
+
+        <div class="page" id="page-news">
+          <div class="grid">
+            <div class="card span-5">
+              <div class="card-title">News Monitor</div>
+              <div class="field"><label>Name</label><input id="news-name" value="Fintech regulatory watch"></div>
+              <div class="field"><label>Natural language query</label><textarea id="news-query">Track important SEBI and RBI news affecting Indian wealthtech and retail investing apps.</textarea></div>
+              <div class="field"><label>Daily time</label><input id="news-time" value="20:00"></div>
+              <button class="btn green" onclick="saveNewsMonitor()">Save Monitor</button>
+            </div>
+            <div class="card span-7">
+              <div class="card-title">Configured Monitors</div>
+              <div class="list" id="news-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="page-copilot">
+          <div class="grid">
+            <div class="card span-8">
+              <div class="card-title">Research Copilot</div>
+              <div class="chat">
+                <div class="chat-messages" id="chat-messages"><div class="msg bot">Ask about problems, competitors, transcript insights, or product briefs from the selected project.</div></div>
+                <div class="chat-input">
+                  <input id="chat-question" placeholder="What should we build next?">
+                  <button class="btn primary" onclick="askCopilot()">Ask</button>
+                </div>
+              </div>
+            </div>
+            <div class="card span-4">
+              <div class="card-title">Quick Prompts</div>
+              <div class="list">
+                <button class="btn" onclick="setPrompt('What are the top 3 user problems?')">Top problems</button>
+                <button class="btn" onclick="setPrompt('What should we build next and why?')">Build next</button>
+                <button class="btn" onclick="setPrompt('Which competitor gap matters most?')">Competitor gap</button>
+                <button class="btn" onclick="setPrompt('Summarize the latest transcript insights.')">Transcript summary</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const S = { projects: [], jobs: [], monitors: [], history: [] };
+    const $ = (id) => document.getElementById(id);
+    const api = (path, options = {}) => fetch(path, {
+      headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+      ...options
+    }).then(async r => {
+      const text = await r.text();
+      const data = text ? JSON.parse(text) : {};
+      if (!r.ok) throw new Error(data.detail || data.message || r.statusText);
+      return data;
+    });
+    const esc = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+    const log = (id, msg) => { $(id).textContent = `${new Date().toLocaleTimeString()}  ${msg}\n` + $(id).textContent; };
+    const selectedProject = () => $('project-select').value || 'Stockgro';
+
+    document.querySelectorAll('.nav button').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const page = btn.dataset.page;
+      $(`page-${page}`).classList.add('active');
+      $('top-title').textContent = btn.textContent.trim().replace(/live$/, '').trim();
+    }));
+
+    async function refreshAll() {
+      await Promise.allSettled([loadHealth(), loadProjects(), loadJobs(), loadNews()]);
+      $('last-refresh').textContent = `Refreshed ${new Date().toLocaleTimeString()}`;
+    }
+
+    async function loadHealth() {
+      try {
+        await api('/health');
+        $('api-status').textContent = 'online';
+        $('api-status').classList.add('ok');
+        $('m-health').textContent = 'OK';
+      } catch (e) {
+        $('api-status').textContent = 'offline';
+        $('api-status').classList.remove('ok');
+        $('m-health').textContent = 'ERR';
+      }
+    }
+
+    async function loadProjects() {
+      const data = await api('/projects');
+      S.projects = data.projects || [];
+      $('m-projects').textContent = S.projects.length;
+      $('project-select').innerHTML = S.projects.map(p => `<option>${esc(p.project_name)}</option>`).join('') || '<option>Stockgro</option>';
+      $('project-list').innerHTML = S.projects.map(p => {
+        const st = p.processing_status || {};
+        return `<div class="item"><strong>${esc(p.project_name)}</strong><small>${esc(p.domain || 'No domain')}</small><div class="row"><span class="tag ${st.agent2_insights_extracted ? 'green' : ''}">A2</span><span class="tag ${st.agent3_synthesis_done ? 'green' : ''}">A3</span><span class="tag ${st.agent4_product_brief_done ? 'green' : ''}">A4</span></div></div>`;
+      }).join('') || '<div class="item"><small>No projects yet.</small></div>';
+    }
+
+    async function loadJobs() {
+      const data = await api('/jobs');
+      S.jobs = (data.jobs || []).reverse();
+      $('m-jobs').textContent = S.jobs.length;
+      $('job-list').innerHTML = S.jobs.slice(0, 8).map(j => `<div class="item"><strong>${esc(j.kind)}</strong><small>${esc(j.status)} · ${esc(j.updated_at || '')}</small></div>`).join('') || '<div class="item"><small>No jobs yet.</small></div>';
+    }
+
+    async function loadNews() {
+      const data = await api('/news/monitors');
+      S.monitors = data.monitors || [];
+      $('m-news').textContent = S.monitors.length;
+      $('news-list').innerHTML = S.monitors.map(m => `<div class="item"><strong>${esc(m.name)}</strong><small>${esc(m.schedule_time)} ${esc(m.timezone)} · ${m.enabled ? 'enabled' : 'paused'}</small><div>${esc(m.query)}</div></div>`).join('') || '<div class="item"><small>No monitors configured.</small></div>';
+    }
+
+    async function runLocalTranscript() {
+      const body = {
+        project_name: $('local-project').value.trim(),
+        input_path: $('local-path').value.trim(),
+        provider: $('local-provider').value,
+        run_async: true
+      };
+      log('transcript-log', 'Starting local transcript pipeline...');
+      const res = await api('/ingest/transcripts/local', { method: 'POST', body: JSON.stringify(body) });
+      log('transcript-log', `Queued job ${res.job_id}`);
+      await loadJobs();
+    }
+
+    async function runDriveSync() {
+      const body = {
+        project_name: $('drive-project').value.trim(),
+        folder_id: $('drive-folder').value.trim(),
+        credentials_path: $('drive-creds').value.trim() || null,
+        run_async: true
+      };
+      log('transcript-log', 'Starting Google Drive sync...');
+      const res = await api('/ingest/google-drive', { method: 'POST', body: JSON.stringify(body) });
+      log('transcript-log', `Queued job ${res.job_id}`);
+      await loadJobs();
+    }
+
+    async function runCompany() {
+      const project = $('company-name').value.trim();
+      const payload = { project_name: project };
+      if ($('company-domain').value.trim()) payload.domain = $('company-domain').value.trim();
+      const body = { project_name: project, provider: $('company-provider').value, start_from: 'agent1', agent1_payload: payload };
+      log('company-log', 'Starting company profile research...');
+      const res = await api('/pipeline/run', { method: 'POST', body: JSON.stringify(body) });
+      log('company-log', `Queued job ${res.job_id}`);
+      await loadJobs();
+    }
+
+    async function runSocial() {
+      const project = $('social-project').value.trim();
+      const payload = { project_name: project, skip_company_profile: true };
+      if ($('play-store-id').value.trim()) payload.play_store = { link_or_id: $('play-store-id').value.trim(), reviews_count: 50 };
+      if ($('app-store-id').value.trim()) payload.app_store = { link_or_id: $('app-store-id').value.trim(), reviews_count: 50 };
+      if ($('reddit-query').value.trim()) payload.reddit = [{ input: $('reddit-query').value.trim(), mode: 'search', limit: 10 }];
+      if ($('youtube-query').value.trim()) payload.youtube = [{ mode: 'search', query: $('youtube-query').value.trim(), count: 5 }];
+      const body = { project_name: project, start_from: 'agent1', agent1_payload: payload };
+      log('social-log', 'Starting social scrapers...');
+      const res = await api('/pipeline/run', { method: 'POST', body: JSON.stringify(body) });
+      log('social-log', `Queued job ${res.job_id}`);
+      await loadJobs();
+    }
+
+    async function saveNewsMonitor() {
+      const body = {
+        name: $('news-name').value.trim(),
+        query: $('news-query').value.trim(),
+        schedule_time: $('news-time').value.trim(),
+        timezone: 'Asia/Kolkata',
+        sources: ['news', 'sebi', 'rbi'],
+        enabled: true
+      };
+      await api('/news/monitors', { method: 'POST', body: JSON.stringify(body) });
+      await loadNews();
+    }
+
+    function setPrompt(q) {
+      $('chat-question').value = q;
+      $('chat-question').focus();
+    }
+
+    async function askCopilot() {
+      const q = $('chat-question').value.trim();
+      if (!q) return;
+      addMsg(q, 'user');
+      $('chat-question').value = '';
+      addMsg('Thinking...', 'bot', 'thinking');
+      try {
+        const res = await api('/copilot/ask', {
+          method: 'POST',
+          body: JSON.stringify({ project_name: selectedProject(), question: q, history: S.history })
+        });
+        S.history = res.history || [];
+        document.querySelector('[data-temp="thinking"]')?.remove();
+        addMsg(res.answer, 'bot');
+      } catch (e) {
+        document.querySelector('[data-temp="thinking"]')?.remove();
+        addMsg(e.message, 'bot');
+      }
+    }
+
+    function addMsg(text, who, temp) {
+      const el = document.createElement('div');
+      el.className = `msg ${who}`;
+      if (temp) el.dataset.temp = temp;
+      el.innerHTML = esc(text).replace(/\n/g, '<br>');
+      $('chat-messages').appendChild(el);
+      $('chat-messages').scrollTop = $('chat-messages').scrollHeight;
+    }
+
+    $('chat-question').addEventListener('keydown', e => {
+      if (e.key === 'Enter') askCopilot();
+    });
+
+    refreshAll();
+    setInterval(loadJobs, 6000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+{
+    "company_name": "Groww",
+    "domain": "groww.in",
+    "playstore_link": "https://play.google.com/store/apps/details?id=com.nextbillion.groww",
+    "appstore_link": "https://apps.apple.com/in/app/groww-stocks-mutual-fund-ipo/id1453412588",
+    "youtube_official_channel": "https://www.youtube.com/@Groww",
+    "linkedin_company_page": "https://www.linkedin.com/company/groww/",
+    "year_founded": "2016, Bengaluru, Karnataka, India",
+    "names_of_founders": [
+        "Lalit Keshre",
+        "Harsh Jain",
+        "Neeraj Singh",
+        "Ishan Bansal"
+    ],
+    "c-suite_officer": [
+        "Lalit Keshre - CEO",
+        "Harsh Jain - COO",
+        "Neeraj Singh - CTO",
+        "Ishan Bansal - CFO",
+        "Ashutosh Naik - Chief Compliance Officer"
+    ],
+    "employee_count": "1,415",
+    "exact_hq_location": "Vaishnavi Tech Park, South Tower, 3rd Floor, Sarjapur Main Road, Bellandur, Bengaluru, Karnataka 560103, India",
+    "locations_operating_in": [
+        "India (across 900+ cities)"
+    ],
+    "industry_and_segment": "Fintech, Investment Platform, Brokerage, Wealth Management",
+    "available_platforms": "Web & Mobile (both)",
+    "funding_raised": "$1.1B",
+    "funding_stage": "Public",
+    "no_of_users": "40 Million+ (registered users) | 12.59 Million (active users)",
+    "annual_revenue": "₹4,056 crore (approx. $480M) in FY25",
+    "key_positioning": "Democratizing investing in India by making financial services accessible, transparent, and user-friendly through a mobile-first platform, simplifying financial management for both beginners and experienced investors.",
+    "revenue_model": "Brokerage commissions (equity, F&O, commodity trading), float income from mutual funds, premium services and subscription fees (advisory, advanced features), ancillary financial services (lending, payments), IPO distribution.",
+    "pricing_tiers": [
+        "Free: Demat account opening, account maintenance, direct mutual fund investments.",
+        "Equity Trading: ₹20 per order or 0.05% (whichever is lower).",
+        "Futures & Options (F&O) Trading: Flat ₹20 per executed order."
+    ],
+    "target_customer_segments": [
+        "Young, digitally savvy retail investors",
+        "First-time wealth builders",
+        "Millennials and Gen Z",
+        "Customers in Tier 2 and Tier 3 Indian cities",
+        "Affluent investors"
+    ],
+    "tech_stack_highlights": [
+        "Google Kubernetes Engine",
+        "Google Cloud Platform (GCP)",
+        "BigQuery",
+        "Firebase",
+        "Java",
+        "Golang",
+        "Node.js",
+        "MySQL",
+        "Kubernetes",
+        "React Native",
+        "Spring Boot",
+        "Amazon Web Services (AWS)"
+    ],
+    "milestones": [
+        "2016: Company founded in Bengaluru, India.",
+        "May 2017: Launched as a direct mutual fund distribution web platform.",
+        "December 2017: Groww app launched.",
+        "October 2021: Raised Series E funding, valued at $3 billion.",
+        "Early 2023: Completed acquisition of Indiabulls AMC's mutual fund business.",
+        "October 2023: Overtook Zerodha to become India's largest stockbroker by active users.",
+        "2024: Completed domicile transition back to India from the United States.",
+        "March 2026: Raised $200M in 'Other Equity' funding."
+    ],
+    "new_features_launched": [
+        "Commodities Trading (Gold, Silver, Crude Oil, Natural Gas, Zinc, Aluminium & Copper) — May 2026",
+        "Margin Trading Facility (MTF) with up to 4x leverage",
+        "UPI Payments, Bill Recharges, and FASTag management",
+        "Advanced Trading Tools: GTT orders, TradingView charts, stock screeners",
+        "F&O Trading Enhancements: Safe Exit, Advanced Option Chain, Instant Pledge, Basket Orders, Payoff Graph",
+        "'W by Groww' (wealth management for affluent users) — June 2025"
+    ],
+    "recent_partnerships_and_integrations": [
+        {
+            "partner": "Indiabulls AMC",
+            "type": "Acquisition",
+            "description": "Completed the acquisition of Indiabulls AMC's mutual fund business, allowing Groww to create and manage new investment products.",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIFqBqLzpAwcTZWLBy1lpbXrX8coPFfCeHEVqH5itS9zOIDQfMJg3GZsLjMqizx2QWGHnazMt_D7TkRr8tkTgbhliqzDc0b350br15P1TOwX-FLhLftrP6WaMGnus6lABawXpbAA==",
+            "date": "2023-01-01"
+        },
+        {
+            "partner": "Finwizard Technology Private Limited",
+            "type": "Acquisition",
+            "description": "Groww acquired Finwizard Technology Private Limited for $150M.",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM6S-r3yD71UswOAM0jbRoSNnbdhhQKZPBiXxaIZhl7ctxG51b3HGA4gumfbwqwtHe7vO2DFiwCCqennPwS7BLCY85lXdzwb1mLC26gCoXMjFgdQb80FUebhiC4Y4F2tpZqLRFumLM_YT6",
+            "date": "2025-05-16"
+        },
+        {
+            "partner": "IIT Bombay and Groww Foundation",
+            "type": "Strategic Partnership",
+            "description": "Launched landmark partnership to drive deep-tech innovation.",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiINQOzyEr7OJoZA_w_TaEWGHcxKFbCHR8nKqhn638I2mx3FIT_UAbfu-b5ypyoZm82TFnx3aHd04Arjq93S8dkg7npqvPJcIIf8f36AbSPyqq5Dg8vxyDeFjmHmM=",
+            "date": "2025-12-10"
+        },
+        {
+            "partner": "Ringg AI",
+            "type": "Investment",
+            "description": "Groww made an investment in Ringg AI during its $5.3M Series A funding round.",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOZDkxlvpUoNey_g9CLDioLjJTN3gr-SU8nAqmRG0esDOn9tpXPyTmmSfG5UKiCodJ2yVut46gowh4EF5QnGmPO-QdTe6Q_9k3gr2CtuGmGtWmQvH2LABCtpNt6ffO",
+            "date": "2026-01-21"
+        }
+    ],
+    "competitors": [
+        {
+            "name": "Zerodha",
+            "domain": "zerodha.com"
+        },
+        {
+            "name": "Upstox",
+            "domain": "upstox.com"
+        },
+        {
+            "name": "Angel One",
+            "domain": "angelone.in"
+        },
+        {
+            "name": "Paytm Money",
+            "domain": "paytmmoney.com"
+        }
+    ],
+    "differentiators": [
+        {
+            "feature": "User-friendly interface and simplified investment process",
+            "user_type": "Beginner investors",
+            "frequency": "Continuous",
+            "source": "https://groww.in/why-groww",
+            "date": "Recent",
+            "effect": [
+                "Makes investing accessible and less intimidating for new users."
+            ]
+        },
+        {
+            "feature": "Zero commission on mutual fund investments",
+            "user_type": "Mutual fund investors",
+            "frequency": "Continuous",
+            "source": "https://groww.in/mutual-funds",
+            "date": "Recent",
+            "effect": [
+                "Attracts cost-conscious investors and promotes long-term investing."
+            ]
+        },
+        {
+            "feature": "Integrated platform for stocks, MFs, F&O, commodities, and IPOs",
+            "user_type": "All investors",
+            "frequency": "Continuous",
+            "source": "https://groww.in/",
+            "date": "Recent",
+            "effect": [
+                "Provides a one-stop-shop for diverse investment needs."
+            ]
+        }
+    ],
+    "user_complaints": [
+        {
+            "issue": "App crashes or becomes unresponsive during peak trading hours",
+            "user_type": "Active traders",
+            "frequency": "Occasional",
+            "source": "https://www.reddit.com/r/IndiaInvestments/comments/z672v9/groww_app_not_responding_anyone_else_facing_this/",
+            "date": "2022-11-27",
+            "effect": [
+                "Loss of trading opportunities and financial losses."
+            ]
+        },
+        {
+            "issue": "Delays in customer support response and resolution",
+            "user_type": "All users",
+            "frequency": "Continuous",
+            "source": "https://play.google.com/store/apps/details?id=com.nextbillion.groww&hl=en_IN&gl=US",
+            "date": "Recent",
+            "effect": [
+                "Increased user frustration and dissatisfaction."
+            ]
+        },
+        {
+            "issue": "Issues with order execution and slippage",
+            "user_type": "Active traders",
+            "frequency": "Occasional",
+            "source": "https://www.reddit.com/r/IndianStreetBets/comments/11k481m/is_groww_brokerage_real/",
+            "date": "2023-03-08",
+            "effect": [
+                "Affects trading profitability and confidence."
+            ]
+        },
+        {
+            "issue": "Difficulty in withdrawing funds or long processing times",
+            "user_type": "All users",
+            "frequency": "Occasional",
+            "source": "https://www.quora.com/Is-Groww-app-reliable-for-investing-in-India",
+            "date": "2023-05-10",
+            "effect": [
+                "Causes inconvenience and potential cash flow problems for users."
+            ]
+        },
+        {
+            "issue": "Lack of advanced charting tools or indicators compared to competitors",
+            "user_type": "Professional traders",
+            "frequency": "Continuous",
+            "source": "https://www.reddit.com/r/IndiaInvestments/comments/1540g8u/why_is_groww_so_popular/",
+            "date": "2023-07-20",
+            "effect": [
+                "Limits the platform's appeal to sophisticated traders."
+            ]
+        }
+    ],
+    "regulatory_and_legal_issues": [
+        {
+            "issue": "SEBI's action regarding mis-selling of ULIPs by some of its distributors",
+            "jurisdiction": "India",
+            "status": "Resolved",
+            "source": "https://www.sebi.gov.in/legal/enforcement-actions/aug-2023/sebi-order-against-groww-in-matter-of-mis-selling-of-ulips/69851.html",
+            "date": "2023-08-14",
+            "effect": [
+                "Resulted in a penalty and strengthened compliance oversight."
+            ]
+        }
+    ],
+    "current_problems_struggling_with": [
+        {
+            "description": "Intensifying competition in the Indian fintech space",
+            "user_type": "All users",
+            "frequency": "Continuous",
+            "source": "https://www.livemint.com/companies/news/groww- Zerodha-upstox-face-intense-competition-in-indian-fintech-space/11692900757163.html",
+            "date": "2023-08-24",
+            "effect": [
+                "May impact market share and profitability."
+            ]
+        },
+        {
+            "description": "Maintaining user trust amidst market volatility and potential technical glitches",
+            "user_type": "All users",
+            "frequency": "Occasional",
+            "source": "https://economictimes.indiatimes.com/markets/stocks/news/groww-users-face-app-outage-screenshots-of-technical-issues-go-viral-on-twitter/articleshow/96379435.cms",
+            "date": "2022-12-26",
+            "effect": [
+                "Can lead to user churn and negative sentiment."
+            ]
+        },
+        {
+            "description": "Attracting and retaining high-value customers beyond basic trading",
+            "user_type": "Experienced investors",
+            "frequency": "Continuous",
+            "source": "https://www.businesstoday.in/sectors/it-and-ites/story/fintech-startup-groww-eyes-ipo-in-2-3-years-says-co-founder-neeraj-singhal-399298-2023-10-25",
+            "date": "2023-10-25",
+            "effect": [
+                "Limits revenue diversification and growth potential."
+            ]
+        },
+        {
+            "description": "Navigating evolving regulatory landscapes in the financial services sector",
+            "user_type": "All users",
+            "frequency": "Continuous",
+            "source": "https://www.sebi.gov.in/legal/enforcement-actions/aug-2023/sebi-order-against-groww-in-matter-of-mis-selling-of-ulips/69851.html",
+            "date": "2023-08-14",
+            "effect": [
+                "Requires continuous adaptation and compliance investment."
+            ]
+        },
+        {
+            "description": "Scaling customer support to match rapid user growth",
+            "user_type": "All users",
+            "frequency": "Continuous",
+            "source": "https://www.reddit.com/r/IndiaInvestments/comments/y5z42x/anyone_else_facing_issues_with_groww_app/",
+            "date": "2022-10-17",
+            "effect": [
+                "Potential for delayed issue resolution and user frustration."
+            ]
+        }
+    ],
+    "strategic_moves": [
+        {
+            "move": "Expansion into commodities trading",
+            "user_type": "All investors",
+            "frequency": "Recent",
+            "source": "https://groww.in/commodities",
+            "date": "2023-05-01",
+            "effect": [
+                "Diversifies product offerings and caters to a broader investor base."
+            ]
+        },
+        {
+            "move": "Introduction of Margin Trading Facility (MTF)",
+            "user_type": "Active traders",
+            "frequency": "Recent",
+            "source": "https://groww.in/margin-trading",
+            "date": "2023-07-15",
+            "effect": [
+                "Enhances trading leverage and potential for higher returns."
+            ]
+        },
+        {
+            "move": "Focus on financial literacy and educational content",
+            "user_type": "New and retail investors",
+            "frequency": "Continuous",
+            "source": "https://groww.in/blog",
+            "date": "Recent",
+            "effect": [
+                "Builds user confidence and promotes informed investment decisions."
+            ]
+        }
+    ],
+    "other_crucial_details": [
+        "Groww is considering an IPO within the next 2-3 years.",
+        "The company aims to expand its offerings to include wealth management solutions for high-net-worth individuals.",
+        "Groww's co-founder indicated plans to deepen engagement with existing users and attract new demographics.",
+        "The company has been actively hiring across various tech and business functions to support its growth."
+    ],
+    "market_sentiment": {
+        "overall": "Positive",
+        "analyst_view": "Analysts view Groww positively, citing its strong user growth, expanding product suite, and focus on user experience. Its market positioning as a democratizer of investments in India is seen as a key strength.",
+        "user_community_view": "User sentiment is largely positive, with praise for its ease of use and low costs. Some occasional complaints arise regarding technical glitches or customer support response times.",
+        "source": "https://www.businesstoday.in/sectors/it-and-ites/story/fintech-startup-groww-eyes-ipo-in-2-3-years-says-co-founder-neeraj-singhal-399298-2023-10-25",
+        "date": "2023-10-25"
+    }
+}

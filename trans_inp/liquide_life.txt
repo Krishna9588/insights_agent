@@ -1,0 +1,181 @@
+Meeting Transcript: Liquide Life Product Strategy
+
+Date: May 12, 2026
+Duration: 60 Minutes
+Attendees:
+
+* Rohan: Founder of Liquide Life
+* Priya: Product Manager at Liquide Life
+* Rahul Soni: Jr ML Associate at Liquide Life
+* Amit: Retail Investor and Liquide One User
+* Sarah: Wealth Management Client
+
+Rohan: Hello everyone. Welcome to our product feedback meeting. We are here to talk about Liquide Life. We want to make our app better for you. We have a full hour today. I want to hear all your thoughts. We will discuss the good things and the bad things.
+
+Priya: Thank you Rohan. I am Priya. I look after the product features here. We want to know how you use the app every day. Your feedback is very important to us. It helps us build better tools.
+
+Amit: Hi Rohan and Priya. Thank you for inviting me. I am Amit. I use Liquide One a lot. I look forward to sharing my thoughts. I have some ideas for the portfolio checkup feature.
+
+Sarah: Hello everyone. I am Sarah. I have been using the app for six months. I really like the Academy courses. But I do have some problems with the LiMo research bot. I am glad we can talk about it today.
+
+Rahul Soni: Hello Sarah and Amit. I am Rahul Soni. I work as a Jr ML Associate here at Liquide Life. I help build the artificial intelligence tools. I am very interested to hear your feedback on LiMo. We are always trying to improve the model.
+
+Rohan: Let us start with the existing system. Amit, you mentioned the portfolio checkup feature. Can you tell us more about your experience? What problems are you facing right now?
+
+Amit: Yes Rohan. The portfolio checkup is a good idea. It helps me see my investments in one place. But it takes a lot of time to update. Sometimes I buy new stocks on my broker account. It takes two days for the Liquide app to show the new stocks.
+
+Priya: I understand Amit. That is a delay. You want to see your new stocks right away. Does this happen with all your brokers or just one?
+
+Amit: It happens mainly with my main broker. I want the health score to reflect my current holdings. The delay makes it hard to make quick decisions. When the market changes fast, I need my portfolio score to be accurate today.
+
+Rohan: That makes complete sense. We rely on the connection with the brokers. Sometimes their data takes time to reach us. But two days is too long. We need to fix this. Priya, what can we do here?
+
+Priya: We are looking at new ways to connect with the brokers. We want to fetch the data more often. Right now, we fetch it once a day. We can try to fetch it every hour. This will make the portfolio health score much more accurate.
+
+Amit: That would be great Priya. Another thing about the portfolio checkup is the red flags feature. It tells me when a stock is bad. I really like that. But sometimes it does not tell me why it is bad. It just gives a warning.
+
+Sarah: I agree with Amit. I see the red flags too. But I do not know what to do next. Should I sell the stock? Should I wait? The app needs to give more clear instructions.
+
+Rohan: This is very helpful feedback. We want to simplify financial concepts. We do not want to confuse you. Rahul Soni, do you think our system can explain the red flags better?
+
+Rahul Soni: Yes Rohan. We can definitely improve this. As a Jr ML Associate, I look at the data behind these red flags. Right now, the system just spots a risk and flags it. We can train the model to generate a small text explanation.
+
+Priya: That sounds like a good plan. We can show a small sentence next to the red flag. For example, it could say the company has too much debt. Or it could say the company profits are going down.
+
+Amit: Yes exactly. Simple explanations like that are perfect. I do not want to read a big report. I just want one small paragraph explaining the problem.
+
+Sarah: I second that. Keep it short and simple. I also want to talk about the mutual fund analytics. I recently started investing in mutual funds through the app.
+
+Rohan: Please go ahead Sarah. We launched the mutual fund analytics recently. How do you find it?
+
+Sarah: I like that I can see all my funds in one place. But the app only shows past performance. It tells me how much the fund grew last year. I want to know about the future. What do your experts think about the fund for the next three years?
+
+Priya: That is an interesting point. You want forward looking views on mutual funds. Currently, our stock trade recommendations give short term and long term views. We do not have that for mutual funds yet.
+
+Sarah: Yes. When I buy a stock, the app gives a clear target price. It also gives a stop loss. It makes it very easy to trade. Mutual funds do not have targets. But it would be nice to have a rating system based on future growth.
+
+Rahul Soni: We are actually testing a new mutual fund scoring system. We analyze the stocks inside the mutual fund. If the mutual fund holds good stocks, the fund gets a high score. We can show this score to users like you Sarah.
+
+Sarah: That sounds very useful Rahul Soni. Will it be part of the free app or Liquide One?
+
+Rohan: We will probably keep the basic score free. The detailed analysis will be for Liquide One members. Speaking of Liquide One, Amit, you are a subscriber. Are you getting good value from the membership?
+
+Amit: Yes I am. The unlimited trade setups are very helpful. I follow the short term trade recommendations closely. They have worked out well for me. But I have one issue. The alerts come a bit late.
+
+Priya: Can you explain what you mean by late Amit?
+
+Amit: Sometimes I get a notification to buy a stock at a certain price. When I open the app, the price has already gone up. The market moves very fast. If the notification is delayed by even five minutes, I miss the opportunity.
+
+Rohan: We cannot afford delays with trade alerts. Time is money in the stock market. Priya, where is the delay happening?
+
+Priya: Our experts publish the trade idea on our backend. Then the system sends push notifications to all users. Sending notifications to five million users takes some time. The last users in the queue get it late.
+
+Rohan: We need to speed that up. We must send the notifications to Liquide One users first. They pay for the premium service. They should get the alerts instantly.
+
+Priya: That is a very fair point. We can create a priority queue for Liquide One members. They will receive the trade alerts before anyone else. This should solve Amit's problem.
+
+Amit: That would be perfect. I also want to ask about execution. When I get a trade idea, I have to open my broker app to buy the stock. Can you add a button to buy the stock directly inside Liquide Life?
+
+Rohan: That is a big feature request. We currently do not buy or sell on your behalf. We let the broker handle the execution. We do this to keep your money safe. We are an advisory platform.
+
+Amit: I understand you do not hold my money. But maybe you could link to the broker app directly. It would save me a few clicks. I want to see the recommendation and click buy. Then it should open my broker app with the details filled in.
+
+Priya: That is actually possible. We can build a bridge to popular broker apps. When you click buy on our app, it will take you to the broker login. Once you log in, the order details will be ready. You just have to confirm.
+
+Sarah: I would love that feature too. It makes investing much more fun and easy. Currently, switching apps is a bit annoying.
+
+Rohan: Okay Priya. Let us put the broker bridge on our product roadmap. It seems our users really want a smoother experience. Now let us shift our focus to LiMo. Sarah, you mentioned you had some feedback on our AI assistant.
+
+Sarah: Yes. I use LiMo to ask questions about stocks. Most of the time it gives great answers. It gives clear buy hold or sell recommendations. But sometimes it does not understand my questions.
+
+Rahul Soni: I am very sorry to hear that Sarah. Can you give me an example of when LiMo failed to understand you?
+
+Sarah: Sure. Last week I asked LiMo about the best green energy stocks. I wanted companies that work with solar power. LiMo gave me a list of companies that paint things green. It completely misunderstood the context.
+
+Rahul Soni: Thank you for sharing that example. That is a clear problem with the natural language processing. The model focused on the word green as a color instead of an industry. We need to train the model to understand the context of the stock market better.
+
+Rohan: This is exactly why we are having this meeting. We call LiMo the first AI powered research assistant. It needs to be smart. Rahul Soni, how fast can we fix these context issues?
+
+Rahul Soni: We can update the training data this week Rohan. As a Jr ML Associate, I will add more financial context to the model. We will teach LiMo that words like green and clean relate to renewable energy. This is an easy fix.
+
+Sarah: That is great to hear. Another thing about LiMo. Sometimes the answers are too long. It gives me three pages of text. I do not have time to read all that. I just want a simple summary. I prefer one paragraph.
+
+Rahul Soni: I understand completely Sarah. We can add a summary feature. LiMo can give a short one paragraph answer first. If you want to read more, you can click a button to see the full report. This will keep things very simple and easy to read.
+
+Amit: I agree with Sarah. I like short and simple answers too. Heavy fancy terms and long paragraphs are boring. Please keep the English easy.
+
+Rohan: We will definitely do that. We want investing to be simple and not filled with jargon. Rahul Soni will make sure LiMo uses simple English. Let us talk about our managed baskets now.
+
+Priya: Yes. Our baskets are designed to help you spread risk. We use quant and AI strategies to pick the stocks. Amit, have you tried investing in any of our baskets?
+
+Amit: Yes I have invested in the top hundred basket. It is doing well. But I feel I have no control over it. I cannot change any stocks inside the basket.
+
+Rohan: The idea of a managed basket is that our experts do the work for you. We optimize the returns so you do not have to worry. If you change the stocks, it might ruin the strategy.
+
+Amit: I know. But sometimes I read bad news about one company in the basket. I want to remove just that one company. I want to keep the rest of the basket as it is.
+
+Priya: We call that a custom basket. We do not offer that right now. But we are thinking about it. We could let users copy an expert basket and then make their own changes.
+
+Sarah: I would like that too. It gives us more control over our money. But I also want to ask about the minimum investment amount. Some of the baskets require a lot of money to start.
+
+Rohan: We set the minimum amounts based on the stock prices in the basket. We need to buy a certain number of shares to match the strategy. But we are looking for ways to lower the entry barrier.
+
+Priya: We might be able to offer fractional shares in the future. This would allow us to lower the minimum investment for all baskets. It depends on the new regulations.
+
+Sarah: That would be amazing. Fractional shares would make the baskets accessible to everyone. Now I want to ask about the Academy. I love the courses. But finding the right course is difficult.
+
+Rohan: The Academy is a very important part of Liquide Life. We want to empower you with knowledge. What is difficult about finding the courses Sarah?
+
+Sarah: There are so many courses on the page. Some are for beginners and some are very advanced. There is no clear path. I do not know which course I should take next.
+
+Priya: We need to improve the Academy layout. We currently just list the upcoming live sessions and past videos. We need to create learning tracks.
+
+Sarah: Yes learning tracks would be perfect. A clear step by step guide. Start with basic stock market concepts. Then move to fundamental analysis. Then options trading.
+
+Amit: I agree. I tried to watch an advanced technical strategies video. I did not understand anything. I realized I skipped the basics. The app should tell me to watch the basic videos first.
+
+Rohan: This is a great suggestion. We will reorganize the Academy. We will create a beginner track, a medium track, and an advanced track. We will also add a small quiz at the end of each track.
+
+Priya: That sounds very interactive. We can even give users a digital certificate when they finish a track. This will keep them motivated to learn more.
+
+Rahul Soni: We can also use AI here. Based on what a user searches in the app, LiMo can recommend specific Academy courses. If someone searches for options, LiMo can suggest our options course.
+
+Sarah: That is a brilliant idea Rahul Soni. It makes everything feel connected. The research bot helps you learn. The courses help you trade better.
+
+Rohan: I love the way this is coming together. We are making the whole ecosystem much better. Amit, do you use the calculators on our website?
+
+Amit: Yes I use the SIP calculator and the mutual fund returns calculator. They are very simple and easy to use. I see you are adding new tools soon.
+
+Rohan: Yes we are. We want to be your trusted partner for all financial planning. What other calculators do you need Amit?
+
+Amit: A tax calculator would be very helpful. When I sell a stock, I want to know how much tax I have to pay. Short term capital gains and long term capital gains.
+
+Priya: A tax calculator is definitely on our list. It is very requested. We will prioritize building it. We want to make sure you know your actual profits after tax.
+
+Sarah: Could you also add a retirement planner? I want to know how much money I need to invest every month to retire at fifty.
+
+Priya: Yes Sarah. A retirement goal calculator is also a great idea. We will add that to the financial planning section.
+
+Rohan: We have covered a lot of ground today. Let us summarize the key points. We will improve the portfolio update speed. We will add clear explanations to red flags. We will speed up trade alerts for premium members.
+
+Priya: We will also explore the broker bridge for easy execution. We will create learning tracks in the Academy. And we will add tax and retirement calculators.
+
+Rahul Soni: And I will work on improving LiMo. We will fix the context understanding. We will make sure LiMo provides short and simple summaries. We will avoid long paragraphs and heavy jargon.
+
+Sarah: This has been a very good meeting. I feel that Liquide Life really listens to its users. I am excited to see these new features.
+
+Amit: Thank you Rohan and team. This gives me a lot of confidence in the platform. Keep up the good work. I look forward to the updates.
+
+Rohan: Thank you Amit and Sarah. Your time is very valuable to us. We will start working on these changes immediately. We want investing to be fun and rewarding for you.
+
+Priya: We will send you an email when the new features are ready for testing. Have a wonderful day everyone.
+
+Rahul Soni: Thank you everyone. It was great talking to you. Have a good day.
+
+Rohan: Goodbye team. Talk to you soon.
+
+Amit: Goodbye.
+
+Sarah: Bye everyone.
+
+Priya: Ending the call now. Thank you.

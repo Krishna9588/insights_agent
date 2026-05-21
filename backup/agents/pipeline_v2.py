@@ -26,7 +26,7 @@ from typing import Optional
 try:
     from agents.path import project_db_path
 except ModuleNotFoundError:
-    from path import project_db_path
+    from paths import project_db_path
 
 log = logging.getLogger("pipeline")
 logging.basicConfig(

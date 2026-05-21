@@ -20,7 +20,7 @@ try:
     from agents.path import project_db_path
 except ModuleNotFoundError:
     from model_connect import call_llm
-    from path import project_db_path
+    from paths import project_db_path
 
 log = logging.getLogger("agent2")
 logging.basicConfig(

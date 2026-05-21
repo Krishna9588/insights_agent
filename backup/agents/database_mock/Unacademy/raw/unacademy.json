@@ -1,0 +1,342 @@
+{
+    "company_name": "Unacademy",
+    "domain": "https://unacademy.com/",
+    "playstore_link": "https://play.google.com/store/apps/details?id=com.unacademyapp",
+    "appstore_link": "https://apps.apple.com/in/app/unacademy-learner-app/id1342562507",
+    "youtube_official_channel": "https://www.youtube.com/unacademy",
+    "linkedin_company_page": "https://www.linkedin.com/company/unacademy/",
+    "year_founded": "2015, Bengaluru, India",
+    "names_of_founders": [
+        "Gaurav Munjal",
+        "Roman Saini",
+        "Hemesh Singh"
+    ],
+    "c-suite_officer": [
+        "Gaurav Munjal - Co-Founder & CEO",
+        "Roman Saini - Co-Founder & Chief Educator",
+        "Sachin Gupta - Co-Founder & Head of Engineering",
+        "Abhishek Pipara - Chief Financial Officer"
+    ],
+    "employee_count": "1,799 as on Jul 31, 2025",
+    "exact_hq_location": "540, 100 Feet Rd, Krishna Reddy Layout, Amarjyoti Layout, Domlur, Bengaluru, India",
+    "locations_operating_in": [
+        "India (50+ cities including Delhi, Mumbai, Chennai, Hyderabad, Pune, Kota, Kanpur, Indore, Bhopal, Jaipur, Lucknow, Chandigarh, Bhubaneswar)"
+    ],
+    "industry_and_segment": "EdTech - Online Learning, Test Preparation, Upskilling (K-12, Competitive Exams, Professional Learning)",
+    "available_platforms": "Web & Mobile (both)",
+    "funding_raised": "$880M",
+    "funding_stage": "Acquired",
+    "no_of_users": "95 million+ registered learners by early 2025",
+    "annual_revenue": "₹826.3 crore (FY25)",
+    "key_positioning": "To democratize access to high-quality education by connecting expert educators with learners through an online platform and hybrid learning centers.",
+    "revenue_model": "Freemium (free content with subscription for premium features), Subscription (Unacademy Plus, Iconic), Offline Centres, Advertisements, Partnerships with educational institutions.",
+    "pricing_tiers": [
+        "Free: Limited access to content and classes",
+        "Lite: (Varies by goal, e.g., starts from ₹1,667/month) - Access to curated test series, daily practice questions",
+        "Plus: (Varies by goal, e.g., starts from ₹1,667/month) - Includes India's best educators, interactive live classes, structured courses & PDFs, live tests & quizzes",
+        "Iconic: (Varies by goal, e.g., starts from ₹2,083/month) - Includes all Plus benefits + 1:1 Live Mentorship, Live Doubt Solving, Interview Preparation, Physical Notes (for some plans)"
+    ],
+    "target_customer_segments": [
+        "Students (K-12)",
+        "Competitive Exam Aspirants (UPSC, IIT JEE, NEET UG, CAT, Banking, SSC, etc.)",
+        "Job Aspirants",
+        "Knowledge Seekers",
+        "Educators",
+        "Educational Institutions"
+    ],
+    "tech_stack_highlights": [
+        "Unable to verify"
+    ],
+    "milestones": [
+        "2010: Gaurav Munjal starts Unacademy YouTube channel.",
+        "2015: Company officially founded in Bengaluru, India.",
+        "2017: Raised $4.5M Series A funding.",
+        "2019: Launched Unacademy Plus subscription.",
+        "2020: Achieved Unicorn status. Acquired Kreatryx, CodeChef, PrepLadder, Mastree, Coursavy.",
+        "2021: Raised $440M Series H round. Acquired TapChief, Rheo TV, Swiflearn. Expanded via Relevel into the US.",
+        "2022: Opened first physical learning centre in Kota, Rajasthan.",
+        "2023: Rolled out AI-powered learning assistants.",
+        "2024: Reached EBITDA breakeven in its core online business; offline operations contributed 40% to overall revenue.",
+        "2025: Surpassed 95 million registered learners; 70% of offline centers expected to be profitable.",
+        "2026: Acquired by UpGrad (March 15, 2026)."
+    ],
+    "new_features_launched": [
+        "AI-powered learning assistants (2023)",
+        "Airlearn language learning app launched (June 2024)",
+        "Unacademy Compete's gamification (2025)",
+        "Completely redesigned Unacademy app for cleaner, faster, and intuitive learning (April 2026)"
+    ],
+    "recent_partnerships_and_integrations": [
+        {
+            "partner": "UpGrad",
+            "type": "Acquisition",
+            "description": "Signed a term sheet to acquire Unacademy in an all-stock transaction, marking a significant consolidation in the Indian edtech sector.",
+            "source": "https://timesofindia.indiatimes.com/blogs/etnow-news/upgrad-signs-term-sheet-to-acquire-unacademy-in-all-stock-deal-signals-consolidation-in-indias-edtech-ecosystem/",
+            "date": "2026-03-15"
+        },
+        {
+            "partner": "digiVirus",
+            "type": "Strategic Partnership",
+            "description": "digiVirus partners with Unacademy Group.",
+            "source": "https://leadiq.com/companies/unacademy/media",
+            "date": "2026-04-25"
+        },
+        {
+            "partner": "Franchise Partners",
+            "type": "Strategic Partnership",
+            "description": "Unacademy pivoted its offline learning centers to a capital-efficient franchise model, exiting company-operated centers.",
+            "source": "https://www.forbesindia.com/article/startups/upgrad-unacademy-deal-signals-consolidation-in-indias-edtech-ecosystem/92225/1",
+            "date": "2026-01-XX"
+        }
+    ],
+    "competitors": [
+        {
+            "name": "BYJU'S",
+            "domain": "byjus.com"
+        },
+        {
+            "name": "Vedantu",
+            "domain": "vedantu.com"
+        },
+        {
+            "name": "Physics Wallah",
+            "domain": "physicswallah.live"
+        },
+        {
+            "name": "Testbook",
+            "domain": "testbook.com"
+        }
+    ],
+    "market_sentiment": {
+        "overall": "Mixed",
+        "analyst_view": "Analysts acknowledge Unacademy's efforts in cost control and narrowing losses, with cautious optimism for its strategic shifts towards profitability and an online-first model, despite challenges in its online business.",
+        "user_community_view": "User sentiment is mixed; while many praise content quality, live classes, and educators on platforms like G2 and the App Store, there are significant complaints on Trustpilot about refund policies, aggressive marketing, and technical issues.",
+        "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYb8_8Id5RWqUuWprp5pj-3zdwDBX3L79YDtnT4ZH7JBc5jyJ2zsqVNJ98TyahSaJdIjopdVs5qz0IS-6IJDKzyMGlzg_q9M-hQSHa5l9fDhKGOPxk8RuVykXLX-6tZUkwvMnWBW-pqU-AAhL6yL85hIn6xI8-6qC0oz_JEQM89f8E6Yhn8s_wItd2MAYH92qxE0mV",
+        "date": "2026-02-24"
+    },
+    "other_crucial_details": [
+        "CEO Gaurav Munjal and co-founder Roman Saini stepped away from daily operations in early 2026, with Sumit Jain appointed CEO of Unacademy's core test-prep business.",
+        "Acquisition talks with Ronnie Screwvala's upGrad for a potential merger collapsed in early January 2026 due to disagreements over valuation and deal structure.",
+        "Unacademy aims to achieve one of the 'healthiest cost structures in the sector' by April 2026 after completing its transition to a franchise-led offline model.",
+        "The company held cash reserves of approximately ₹1,100 crore as of January 2026."
+    ],
+    "current_problems_struggling_with": [
+        {
+            "description": "Operating revenue declined by 7.4% year-on-year to ₹839.8 crore in FY24, indicating a revenue downturn in its core business.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESAifF8je045dy17aZNqtN4oygwUXo0uyI2SV4KdcW8EDbHksNijkqbHlUaNpExt-qmsa4oArBVXhIBwEYZYzJ_1aETZFYd2E74bb8J1-8lUPz-n7TsVmK9rha-dtSTNNY-a30yB2qraWpVsdhA5m6JNKvudnVkRXDXSPpVJuqSc2VGr-2_4sHEr8S",
+            "date": "2024-12-17",
+            "effect": [
+                "Reduced financial stability and market confidence."
+            ]
+        },
+        {
+            "description": "Multiple rounds of layoffs, including 250 employees in July 2024 and 380 in March 2023, reflecting efforts to reduce expenses and streamline operations.",
+            "user_type": "Employees",
+            "frequency": "Occasional",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8pTk8D6r5Pup60CocBQd81tkrtfLpvtaXL5SiPxSDz4JLs2zzR9VviEU_kwcAlrJUkg4djV6EPS-QIGnhGYaUU18sc8SgMMYSW4gy5HNAIpTehnJs53S2cTSNCKogrJfGL_hlyY9Mor9CxQqKDrQfNXCwQqCPMt1Hgn8LTpLxeuFKK50RD7PSjxzDY_pEYDVRsbeULzE8bcXV",
+            "date": "2024-07-08",
+            "effect": [
+                "Negative impact on employee morale and brand reputation."
+            ]
+        },
+        {
+            "description": "Slowdown and a 30% degrowth in its online test preparation business post-pandemic, as demand shifted back to offline learning.",
+            "user_type": "Company, Learners",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESAifF8je045dy17aZNqtN4oygwUXo0uyI2SV4KdcW8EDbHksNijkqbHlUaNpExt-qmsa4oArBVXhIBwEYZYzJ_1aETZFYd2E74bb8J1-8lUPz-n7TsVmK9rha-dtSTNNY-a30yB2qraWpVsdhA5m6JNKvudnVkRXDXSPpVJuqSc2VGr-2_4sHEr8S",
+            "date": "2024-12-17",
+            "effect": [
+                "Decreased revenue from its core online offerings."
+            ]
+        },
+        {
+            "description": "Despite narrowing, the company reported a consolidated loss of ₹630.9 crore in FY24, indicating ongoing profitability challenges.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESAifF8je045dy17aZNqtN4oygwUXo0uyI2SV4KdcW8EDbHksNijkqbHlUaNpExt-qmsa4oArBVXhIBwEYZYzJ_1aETZFYd2E74bb8J1-8uPz-n7TsVmK9rha-dtSTNNY-a30yB2qraWpVsdhA5m6JNKvudnVkRXDXSPpVJuqSc2VGr-2_4sHEr8S",
+            "date": "2024-12-17",
+            "effect": [
+                "Sustained financial pressure and need for continued cost control."
+            ]
+        },
+        {
+            "description": "High competition in the EdTech market from rivals like BYJU'S, Vedantu, and Physics Wallah, alongside free content on platforms like YouTube.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN-OyzznbUN4CkACbDUHmvwFK0MeXhHHZKb3hVhG2tP6wzNWAPg4LhT7fIma5eBg-2Jwn3ng_PIBzNsJNIjBG6hnhMp1Xw0PAKkh6EFcIQJ3HnjAx72-UNr32-OVJDN8c5XI-yWh7rSTF9g0UeogVyacuinSg=",
+            "date": "2024",
+            "effect": [
+                "Increased pressure on market share and customer acquisition costs."
+            ]
+        },
+        {
+            "description": "Strategic pivot from directly operating offline centers to a franchise model by April 2026, exiting capital-intensive brick-and-mortar operations.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkCK_6RfatQjk-0mGCAg46Rx9ZYAaCbt9RO7bOkf3Yr-uFaPRlO_RI5mrM5YZLJMD_tH2AajqOqDYZZaJS1KNJo5UX0_XNCFhpBNp5AM4pauOHFtxJ1Ir7rWHqIPjZ_dufbXTJJhRgni1_2euqNufD5KmzyAEysxxQUZQYdsBiQFhSI1QFPfKCvZh0uTSV4YQiGT29X38sSM6S8Sat9h3yiMoGBjLtrqB73qCgBSvc2kxicGN2gyWybEyyhgiTY5OD03Zj",
+            "date": "2026-01-14",
+            "effect": [
+                "Operational restructuring and potential disruption during transition."
+            ]
+        },
+        {
+            "description": "Co-founder Hemesh Singh stepped down as CTO in June 2024, and other senior-level departures reflect leadership shifts and restructuring.",
+            "user_type": "Company, Employees",
+            "frequency": "Occasional",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESAifF8je045dy17aZNqtN4oygwUXo0uyI2SV4KdcW8EDbHksNijkqbHlUaNpExt-qmsa4oArBVXhIBwEYZYzJ_1aETZFYd2E74bb8J1-8uPz-n7TsVmK9rha-dtSTNNY-a30yB2qraWpVsdhA5m6JNKvudnVkRXDXSPpVJuqSc2VGr-2_4sHEr8S",
+            "date": "2024-12-17",
+            "effect": [
+                "Potential loss of institutional knowledge and leadership stability."
+            ]
+        }
+    ],
+    "differentiators": [
+        {
+            "feature": "Daily live interactive classes with expert educators allowing real-time doubt clearing and engagement.",
+            "user_type": "Learners",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG53G3cDVsWkM9uq2WEU-8yHx23e4bgTifuvpwofV09TVrUZ07elzNyhcXaQox2noOsz2hxpSIvj6cQnJL-CNuZ8-ycuxo09BThsZYy538Ggms=",
+            "date": "Recent",
+            "effect": [
+                "Enhanced learning experience through direct interaction."
+            ]
+        },
+        {
+            "feature": "Wide range of courses covering over 60 different exam categories, including K-12, competitive exams, and professional learning.",
+            "user_type": "Learners",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbdR0cgO5GfO-cCbikNz77GgaSgS9j6sZESFfTiiZGWfHkN2TtGlr4f2N7ENVqTF7G131KwgQuqhDVsCx0_3D26AzCyLNTsrjTSBqCV0WJylhvXKxzoSwxyx6gnEweBrLNORkSv4M85Y=",
+            "date": "2026-04-19",
+            "effect": [
+                "Broad appeal to diverse student segments seeking varied educational goals."
+            ]
+        },
+        {
+            "feature": "Features like 'Ask a Doubt' for instant video solutions and AI-powered learning assistants for personalized study.",
+            "user_type": "Learners",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbdR0cgO5GfO-cCbikNz77GgaSgS9j6sZESFfTiiZGWfHkN2TtGlr4f2N7ENVqTF7G131KwgQuqhDVsCx0_3D26AzCyLNTsrjTSBqCV0WJylhvXKxzoSwxyx6gnEweBrLNORkSv4M85Y=",
+            "date": "2026-04-19",
+            "effect": [
+                "Improved problem-solving and tailored learning paths for students."
+            ]
+        },
+        {
+            "feature": "Strategic emphasis on an educator-first positioning, attracting top teachers and building trust.",
+            "user_type": "Learners, Educators",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFN5ZJ6jbAf1GoWi9TcjuiHS-Vo96xIvj5iZ_Fmq_nJpBtzvBR678A85lGErixsahXbc90yCoDOWOQDix5CALjZoPt6kXuIOHMXtDYpcGyK9xTxAg55ExWIqluzIOYfY--PIT_bj-jHhyKwfonIfrrUaFiFzF3F3SwNxGiaw5SHprhDcDvIr9pbyeVcdjXkh8G-Q4x0",
+            "date": "2026-03-20",
+            "effect": [
+                "High-quality instruction and strong student retention."
+            ]
+        }
+    ],
+    "user_complaints": [
+        {
+            "issue": "Strict no-refund policies and difficulties in making changes to subscriptions once purchased.",
+            "user_type": "Learners",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYb8_8Id5RWqUuWprp5pj-3zdwDBX3L79YDtnT4ZH7JBc5jyJ2zsqVNJ98TyahSaJdIjopdVs5qz0IS-6IJDKzyMGlzg_q9M-hQSHa5l9fDhKGOPxk8RuVykXLX-6tZUkwvMnWBW-pqU-AAhL6yL85hIn6xI8-6qC0oz_JEQM89f8E6Yhn8s_wItd2MAYH92qxE0mV",
+            "date": "2026-02-24",
+            "effect": [
+                "Financial loss and frustration for affected users."
+            ]
+        },
+        {
+            "issue": "Misleading promises regarding course format and aggressive sales/email marketing tactics.",
+            "user_type": "Learners",
+            "frequency": "Occasional",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYb8_8Id5RWqUuWprp5pj-3zdwDBX3L79YDtnT4ZH7JBc5jyJ2zsqVNJ98TyahSaJdIjopdVs5qz0IS-6IJDKzyMGlzg_q9M-hQSHa5l9fDhKGOPxk8RuVykXLX-6tZUkwvMnWBW-pqU-AAhL6yL85hIn6xI8-6qC0oz_JEQM89f8E6Yhn8s_wItd2MAYH92qxE0mV",
+            "date": "2026-02-24",
+            "effect": [
+                "Damaged trust and negative user perception."
+            ]
+        },
+        {
+            "issue": "Technical issues with the app, including lags, frequent updates, video playback problems, and bugs (especially on iPadOS).",
+            "user_type": "Learners, Educators",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6DlcKlHA678wo7GdEmAhZyc8tYDbftL2FxQQamvQSdEmT4hCk2FzDHylqDgSnN4zkUMEI6MlosUuDkQc-6kQwvFdDHyh8_UaH8h1DBfNHcKHI94knA5uGAzRSbeyFizliPohnJnYHI3_6Vw==",
+            "date": "2024-08",
+            "effect": [
+                "Disrupted learning experience and user dissatisfaction."
+            ]
+        },
+        {
+            "issue": "Inconsistent course quality and varying teaching styles across different instructors and subjects.",
+            "user_type": "Learners",
+            "frequency": "Occasional",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6DlcKlHA678wo7GdEmAhZyc8tYDbftL2FxQQamvQSdEmT4hCk2FzDHylqDgSnN4zkUMEI6MlosUuDkQc-6kQwvFdDHyh8_UaH8h1DBfNHcKHI94knA5uGA3RSbeyFizliPohnJnYHI3_6Vw==",
+            "date": "2024-08",
+            "effect": [
+                "Uneven learning outcomes and frustration for students."
+            ]
+        },
+        {
+            "issue": "Problems with login access to paid courses and unresolved technical support issues, persisting for months.",
+            "user_type": "Learners",
+            "frequency": "Occasional",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgu3eAVmV6MaPjzbW7yxt0rDJuAphf5jNjnOZRpQznSqQKqSOXk1d0NlCmMh01TIRY8_a3z5Th2tNuLnLApcBVmE5iA1mSrPab_7fJAUvhO60qyQrdMWVIyoHs9C9REmic6KL_Nll9U7_jX6jDoy7N7vo=",
+            "date": "2025-09-10",
+            "effect": [
+                "Inability to access purchased content and wasted study time."
+            ]
+        },
+        {
+            "issue": "Live class timings might not always align with students' schedules, particularly for those with other commitments.",
+            "user_type": "Learners",
+            "frequency": "Occasional",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl_8pFSu54h8IriwrS6suy27KCU3-kLh5qIm09yTZhch-gSs5NuOMXXRjh3xsOjmvvqXqI8tqq3vJau1NiT2nOpAdUvwP8gkrujWYXpyvp8CHc3d2febfOx6RI96GRj7ZRidvoRj7n_UbqpQU=",
+            "date": "2024-11-05",
+            "effect": [
+                "Reduced flexibility and missed live learning opportunities."
+            ]
+        }
+    ],
+    "strategic_moves": [
+        {
+            "move": "Aggressive cost-cutting, including multiple rounds of layoffs and leadership pay cuts, to achieve profitability.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESAifF8je045dy17aZNqtN4oygwUXo0uyI2SV4KdcW8EDbHksNijkqbHlUaNpExt-qmsa4oArBVXhIBwEYZYzJ_1aETZFYd2E74bb8J1-8uPz-n7TsVmK9rha-dtSTNNY-a30yB2qraWpVsdhA5m6JNKvudnVkRXDXSPpVJuqSc2VGr-2_4sHEr8S",
+            "date": "2024-12-17",
+            "effect": [
+                "Narrowed losses and improved financial runway for the company."
+            ]
+        },
+        {
+            "move": "Transitioning from company-operated offline learning centers to an asset-light franchise model by April 2026.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkCK_6RfatQjk-0mGCAg46Rx9ZYAaCbt9RO7bOkf3Yr-uFaPRlO_RI5mrM5YZLJMD_tH2AajqOqDYZZaJS1KNJo5UX0_XNCFhpBNp5AM4pauOHFtxJ1Ir7rWHqIPjZ_dufbXTJJhRgni1_2euqNufD5KmzyAEysxxQUZQYdsBiQFhSI1QFPfKCvZh0uTSV4YQiGT29X38sSM6S8Sat9h3yiMoGBjLtrqB73qCgBSvc2kxicGN2gyWybEyyhgiTY5OD03Zj",
+            "date": "2026-01-14",
+            "effect": [
+                "Reduced cash burn and a healthier cost structure for the company."
+            ]
+        },
+        {
+            "move": "Re-emphasizing an 'online-first' strategy by focusing on building online learning products as its core strength.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwvnaGUKaLehhn0u-uUAdygbliYcpO5iGN09hKpJpcpAjjYArxaQuujmYdqIHazp7z3pzhPQGRJCsGFa8ce5xLEW4DHK7tbFlkhpJrwrjUXDoVQyKrKzJ9aafys0S0w-_B1UUTcxDdcPhv-rCPQ8AWLvE2r2H5-4eqyCEoQA7XiUH2aD4h-qHMpus5L23x6_4vjuwNtq6z7y29zTkUneeBoZqn9ZOj95nnYyVVFooM=",
+            "date": "2026-01-14",
+            "effect": [
+                "Streamlined focus and capital allocation to digital offerings."
+            ]
+        },
+        {
+            "move": "Diversification of offerings by strengthening subsidiaries like PrepLadder and Graphy, which are now cash-flow positive.",
+            "user_type": "Company",
+            "frequency": "Continuous",
+            "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwvnaGUKaLehhn0u-uUAdygbliYcpO5iGN09hKpJpcpAjjYArxaQuujmYdqIHazp7z3pzhPQGRJCsGFa8ce5xLEW4DHK7tbFlkhpJrwrjUXDoVQyKrKzJ9aafys0S0w-_B1UUTcxDdcPhv-rCPQ8AWLvE2r2H5-4eqyCEoQA7XiUH2aD4h-qHMpus5L23x6_4vjuwNtq6z7y29zTkUneeBoZqn9ZOj95nnYyVVFooM=",
+            "date": "2026-01-14",
+            "effect": [
+                "Created new revenue streams and reduced dependence on core online test prep."
+            ]
+        }
+    ],
+    "regulatory_and_legal_issues": []
+}

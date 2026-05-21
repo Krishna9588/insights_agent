@@ -1,0 +1,25 @@
+{
+  "status": "success",
+  "platform": "play_store",
+  "mode": "detailed",
+  "analysis": {
+    "summary": "Groww is a leading financial investment platform in India, offering a wide range of investment options including stocks, mutual funds, gold, silver, futures and options trading, margin trading, commodity derivatives, ETFs, and IPOs. It is trusted by over 4 crore Indians and allows users to open a free demat account to start investing and trading.",
+    "permissions_risk": "Medium",
+    "strengths": [
+      "Trusted by over 4 crore Indians",
+      "Wide range of investment options",
+      "Free demat account",
+      "User-friendly interface",
+      "High user ratings (4.79)"
+    ],
+    "concerns": [
+      "Access to financial data may pose privacy risks",
+      "Requires internet connectivity for all transactions",
+      "Potential for market volatility affecting investments",
+      "Limited customer support details provided",
+      "Permissions risk due to access to sensitive financial information"
+    ]
+  },
+  "processing_time_ms": 6551,
+  "timestamp": "2026-05-12T23:42:38.712203"
+}
